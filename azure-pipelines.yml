@@ -84,7 +84,7 @@ jobs:
       command: 'restore'
       projects: '**/*/*.csproj'
       includeNuGetOrg: true
-  - script: dotnet build ./ECommerx.sln
+  - script: dotnet build ./LucasTecnologiaServices.sln
     displayName: 'dotnet build'
   - task: DotNetCoreCLI@2
     displayName: 'run tests'
