@@ -1,8 +1,13 @@
-﻿using System;
+﻿using LucasTecnologiaServices.Infrastructure.Helpers;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.Json;
 using System.Threading.Tasks;
+using JsonSerializer = Newtonsoft.Json.JsonSerializer;
 
 namespace LucasTecnologiaServices.Infrastructure.Models
 {
