@@ -4,7 +4,7 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/dotnet-core
 
 trigger:
-- master
+- develop
 
 jobs:
 - job: Linux
@@ -63,6 +63,19 @@ jobs:
     inputs:
       packageType: 'sdk'
       version: '5.0.100'
+  - task: NuGetRestore@1
+    inputs:
+      command: 'restore'
+      restoreSolution: '**/*.sln'
+      feedsToUse: 'select'
+  - task: VSTest@2
+    inputs:
+      testSelector: 'testAssemblies'
+      testAssemblyVer2: |
+        **\*test*.dll
+        !**\*TestAdapter.dll
+        !**\obj\**
+      searchFolder: '$(System.DefaultWorkingDirectory)'
   - script: dotnet build ./LucasTecnologiaServices.sln
     displayName: 'dotnet build'
   - task: DotNetCoreCLI@2
@@ -95,6 +108,19 @@ jobs:
     inputs:
       packageType: 'sdk'
       version: '5.0.100'
+  - task: NuGetRestore@1
+    inputs:
+      command: 'restore'
+      restoreSolution: '**/*.sln'
+      feedsToUse: 'select'
+  - task: VSTest@2
+    inputs:
+      testSelector: 'testAssemblies'
+      testAssemblyVer2: |
+        **\*test*.dll
+        !**\*TestAdapter.dll
+        !**\obj\**
+      searchFolder: '$(System.DefaultWorkingDirectory)'
   - task: DotNetCoreCLI@2
     displayName: 'Restoring code using dotnet restore'
     inputs: 
@@ -135,6 +161,19 @@ jobs:
     inputs:
       packageType: 'sdk'
       version: '5.0.100'
+  - task: NuGetRestore@1
+    inputs:
+      command: 'restore'
+      restoreSolution: '**/*.sln'
+      feedsToUse: 'select'
+  - task: VSTest@2
+    inputs:
+      testSelector: 'testAssemblies'
+      testAssemblyVer2: |
+        **\*test*.dll
+        !**\*TestAdapter.dll
+        !**\obj\**
+      searchFolder: '$(System.DefaultWorkingDirectory)'
   - script: dotnet build --configuration $(buildConfiguration)
     displayName: 'dotnet build $(buildConfiguration)'
   - task: DotNetCoreCLI@2
