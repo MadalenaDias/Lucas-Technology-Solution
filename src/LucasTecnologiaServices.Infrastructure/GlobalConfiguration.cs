@@ -1,4 +1,6 @@
-﻿using System;
+﻿using LucasTecnologiaServices.Infrastructure.Localization;
+using LucasTecnologiaServices.Infrastructure.Modules;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
