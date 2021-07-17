@@ -9,6 +9,8 @@ namespace LucasTecnologiaServices.Infrastructure
     public class Result
     {
 
+        public bool Success { get; }
+
         public string Error { get; }
 
         protected Result(bool success, string error)
