@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace LucasTecnologiaServices.Modules.Core.Models
 {
-    public class Country : EntityBase
+    public class Country : EntityBaseWithTypedId<string>
     {
         public Country(string id)
         {
