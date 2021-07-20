@@ -1,5 +1,5 @@
 .imagebackground {
-    background-image: url("../media/backgroundImage.png");
+    background-image: url("../media/Logomarca00100.png");
     background-repeat: no-repeat;
     background-position: center bottom;
     background-size: contain;
@@ -18,9 +18,9 @@
     box-shadow: 2px 2px 5px #000;
 }
 
-.card-position:hover {
-    background-color: #e29f5c;
-}
+    .card-position:hover {
+        background-color: #e29f5c;
+    }
 
 .card-back-position {
     position: absolute;
@@ -44,14 +44,15 @@
     background-color: var(--theme) !important;
 }
 
-.btn-secondary:hover {
-    background-color: var(--subtheme) !important;
-}
+    .btn-secondary:hover {
+        background-color: var(--subtheme) !important;
+    }
 
 @media only screen and (max-width:530px) {
     #middleText {
         font-size: small;
     }
+
     .imagebackground {
         background-size: auto 100%;
     }
@@ -61,6 +62,7 @@
     #middleText {
         font-size: x-large;
     }
+
     .imagebackground {
         background-size: auto 100%;
     }
@@ -69,5 +71,4 @@
 @media only screen and (max-width:1200px) {
     #middleText {
         font-size: xx-large;
-    }
 }
