@@ -1,0 +1,12 @@
+E:\Reposiries\Azure LTS\Lucas-Tecnologia-Solution\src\Modules\ERP\LucasTecnologiaServices.Modules.Erp\bin\Debug\net5.0\LucasTecnologiaServices.Modules.Erp.deps.json
+E:\Reposiries\Azure LTS\Lucas-Tecnologia-Solution\src\Modules\ERP\LucasTecnologiaServices.Modules.Erp\bin\Debug\net5.0\LucasTecnologiaServices.Modules.Erp.dll
+E:\Reposiries\Azure LTS\Lucas-Tecnologia-Solution\src\Modules\ERP\LucasTecnologiaServices.Modules.Erp\bin\Debug\net5.0\ref\LucasTecnologiaServices.Modules.Erp.dll
+E:\Reposiries\Azure LTS\Lucas-Tecnologia-Solution\src\Modules\ERP\LucasTecnologiaServices.Modules.Erp\bin\Debug\net5.0\LucasTecnologiaServices.Modules.Erp.pdb
+E:\Reposiries\Azure LTS\Lucas-Tecnologia-Solution\src\Modules\ERP\LucasTecnologiaServices.Modules.Erp\obj\Debug\net5.0\LucasTecnologiaServices.Modules.Erp.csproj.AssemblyReference.cache
+E:\Reposiries\Azure LTS\Lucas-Tecnologia-Solution\src\Modules\ERP\LucasTecnologiaServices.Modules.Erp\obj\Debug\net5.0\LucasTecnologiaServices.Modules.Erp.GeneratedMSBuildEditorConfig.editorconfig
+E:\Reposiries\Azure LTS\Lucas-Tecnologia-Solution\src\Modules\ERP\LucasTecnologiaServices.Modules.Erp\obj\Debug\net5.0\LucasTecnologiaServices.Modules.Erp.AssemblyInfoInputs.cache
+E:\Reposiries\Azure LTS\Lucas-Tecnologia-Solution\src\Modules\ERP\LucasTecnologiaServices.Modules.Erp\obj\Debug\net5.0\LucasTecnologiaServices.Modules.Erp.AssemblyInfo.cs
+E:\Reposiries\Azure LTS\Lucas-Tecnologia-Solution\src\Modules\ERP\LucasTecnologiaServices.Modules.Erp\obj\Debug\net5.0\LucasTecnologiaServices.Modules.Erp.csproj.CoreCompileInputs.cache
+E:\Reposiries\Azure LTS\Lucas-Tecnologia-Solution\src\Modules\ERP\LucasTecnologiaServices.Modules.Erp\obj\Debug\net5.0\LucasTecnologiaServices.Modules.Erp.dll
+E:\Reposiries\Azure LTS\Lucas-Tecnologia-Solution\src\Modules\ERP\LucasTecnologiaServices.Modules.Erp\obj\Debug\net5.0\ref\LucasTecnologiaServices.Modules.Erp.dll
+E:\Reposiries\Azure LTS\Lucas-Tecnologia-Solution\src\Modules\ERP\LucasTecnologiaServices.Modules.Erp\obj\Debug\net5.0\LucasTecnologiaServices.Modules.Erp.pdb
