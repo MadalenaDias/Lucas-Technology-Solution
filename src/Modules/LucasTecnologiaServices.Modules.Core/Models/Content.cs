@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace LucasTecnologiaServices.Modules.Core.Models
 {
-    public class Content : EntityBase
+    public abstract class Content : EntityBase
     {
         private bool isDeleted;
 
