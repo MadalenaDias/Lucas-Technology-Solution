@@ -4,4 +4,13 @@
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="MediatR" Version="9.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\LucasTecnologiaServices.Infrastructure\LucasTecnologiaServices.Infrastructure.csproj" />
+    <ProjectReference Include="..\LucasTecnologiaServices.Modules.Core\LucasTecnologiaServices.Modules.Core.csproj" />
+  </ItemGroup>
+
 </Project>
