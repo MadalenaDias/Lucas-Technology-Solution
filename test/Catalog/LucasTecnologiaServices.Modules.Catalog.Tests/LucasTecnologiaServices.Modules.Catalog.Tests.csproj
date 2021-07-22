@@ -24,7 +24,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\src\Modules\LucasTecnologiaServices.Modules.ServiceDesk\LucasTecnologiaServices.Modules.ServiceDesk.csproj" />
+    <ProjectReference Include="..\..\..\src\Modules\LucasTecnologiaServices.Modules.Catalog\LucasTecnologiaServices.Modules.Catalog.csproj" />
   </ItemGroup>
 
 </Project>
