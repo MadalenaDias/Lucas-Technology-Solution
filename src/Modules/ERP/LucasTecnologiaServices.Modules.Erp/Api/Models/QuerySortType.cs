@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace LucasTecnologiaServices.Modules.Erp.Api.Models
 {
-    public enum QuerySortType
-    {
-    }
+	public enum QuerySortType
+	{
+		[SelectOption(Label = "asc")]
+		Ascending,
+		[SelectOption(Label = "desc")]
+		Descending
+	}
 }

@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace LucasTecnologiaServices.Modules.Erp.Api.Models
 {
-    public enum DataSourceType
-    {
-    }
+	public enum DataSourceType
+	{
+		[SelectOption(Label = "database")]
+		DATABASE = 0,
+		[SelectOption(Label = "code")]
+		CODE = 1
+	}
 }

@@ -6,7 +6,14 @@ using System.Threading.Tasks;
 
 namespace LucasTecnologiaServices.Modules.Erp.Api.Models
 {
-    public class QueryResponse
-    {
-    }
+	public class QueryResponse : BaseResponseModel
+	{
+		public QueryResponse()
+		{
+			Object = new QueryResult();
+		}
+
+		[JsonProperty(PropertyName = "object")]
+		public QueryResult Object { get; set; }
+	}
 }
