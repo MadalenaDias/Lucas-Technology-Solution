@@ -1,6 +1,10 @@
-using LucasTecnologiaServices.Infrastructure.Data;
-using LucasTecnologiaServices.Modules.Core.Models;
+﻿using LucasTecnologiaServices.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace LucasTecnologiaServices.Modules.Core.Data
 {
@@ -8,7 +12,7 @@ namespace LucasTecnologiaServices.Modules.Core.Data
     {
         public void Build(ModelBuilder modelBuilder)
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
     }
 }
