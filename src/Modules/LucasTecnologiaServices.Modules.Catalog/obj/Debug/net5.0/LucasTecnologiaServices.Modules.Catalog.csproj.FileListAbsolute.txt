@@ -1,5 +1,0 @@
-E:\Users\Nadja.Cerioli\Repositor\Azure\Lucas-Tecnologia-Solution\src\Modules\LucasTecnologiaServices.Modules.Catalog\obj\Debug\net5.0\LucasTecnologiaServices.Modules.Catalog.csproj.AssemblyReference.cache
-E:\Users\Nadja.Cerioli\Repositor\Azure\Lucas-Tecnologia-Solution\src\Modules\LucasTecnologiaServices.Modules.Catalog\obj\Debug\net5.0\LucasTecnologiaServices.Modules.Catalog.GeneratedMSBuildEditorConfig.editorconfig
-E:\Users\Nadja.Cerioli\Repositor\Azure\Lucas-Tecnologia-Solution\src\Modules\LucasTecnologiaServices.Modules.Catalog\obj\Debug\net5.0\LucasTecnologiaServices.Modules.Catalog.AssemblyInfoInputs.cache
-E:\Users\Nadja.Cerioli\Repositor\Azure\Lucas-Tecnologia-Solution\src\Modules\LucasTecnologiaServices.Modules.Catalog\obj\Debug\net5.0\LucasTecnologiaServices.Modules.Catalog.AssemblyInfo.cs
-E:\Users\Nadja.Cerioli\Repositor\Azure\Lucas-Tecnologia-Solution\src\Modules\LucasTecnologiaServices.Modules.Catalog\obj\Debug\net5.0\LucasTecnologiaServices.Modules.Catalog.csproj.CoreCompileInputs.cache
