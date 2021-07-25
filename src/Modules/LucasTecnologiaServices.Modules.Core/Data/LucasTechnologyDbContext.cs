@@ -1,4 +1,5 @@
 ﻿using LucasTecnologiaServices.Infrastructure;
+using LucasTecnologiaServices.Infrastructure.Models;
 using LucasTecnologiaServices.Modules.Core.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
