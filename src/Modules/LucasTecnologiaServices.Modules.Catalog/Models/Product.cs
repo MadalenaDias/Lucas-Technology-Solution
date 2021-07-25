@@ -1,4 +1,5 @@
 ﻿using LucasTecnologiaServices.Modules.Core.Models;
+using LucasTecnologiaServices.Modules.Tax.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
