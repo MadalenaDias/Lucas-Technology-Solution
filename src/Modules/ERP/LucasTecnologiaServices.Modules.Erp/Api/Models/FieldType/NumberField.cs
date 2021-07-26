@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace LucasTecnologiaServices.Modules.Erp.Api.Models.FieldType
 {
-	public class InputCurrencyField : InputField
+	public class InputNumberField : InputField
 	{
 		[JsonProperty(PropertyName = "fieldType")]
-		public static FieldType FieldType { get { return FieldType.CurrencyField; } }
+		public static FieldType FieldType { get { return FieldType.NumberField; } }
 
 		[JsonProperty(PropertyName = "defaultValue")]
 		public decimal? DefaultValue { get; set; }
@@ -20,15 +20,15 @@ namespace LucasTecnologiaServices.Modules.Erp.Api.Models.FieldType
 		[JsonProperty(PropertyName = "maxValue")]
 		public decimal? MaxValue { get; set; }
 
-		[JsonProperty(PropertyName = "currency")]
-		public CurrencyType Currency { get; set; }
+		[JsonProperty(PropertyName = "decimalPlaces")]
+		public byte? DecimalPlaces { get; set; }
 	}
 
 	[Serializable]
-	public class CurrencyField : Field
+	public class NumberField : Field
 	{
 		[JsonProperty(PropertyName = "fieldType")]
-		public static FieldType FieldType { get { return FieldType.CurrencyField; } }
+		public static FieldType FieldType { get { return FieldType.NumberField; } }
 
 		[JsonProperty(PropertyName = "defaultValue")]
 		public decimal? DefaultValue { get; set; }
@@ -39,7 +39,7 @@ namespace LucasTecnologiaServices.Modules.Erp.Api.Models.FieldType
 		[JsonProperty(PropertyName = "maxValue")]
 		public decimal? MaxValue { get; set; }
 
-		[JsonProperty(PropertyName = "currency")]
-		public CurrencyType Currency { get; set; }
+		[JsonProperty(PropertyName = "decimalPlaces")]
+		public byte? DecimalPlaces { get; set; }
 	}
 }

@@ -11,23 +11,22 @@ using System.Threading.Tasks;
 namespace LucasTecnologiaServices.Modules.Erp.Api
 {
 	public class EntityManager
-	{
+    {
 		internal static object lockObj = new object();
 
 		private DbContext suppliedContext = null;
 		private DbContext CurrentContext
-		{
-			get
-			{
+        {
+            get
+            {
 				if (suppliedContext != null)
 					return suppliedContext;
 				else
 					return DbContext.Current;
 			}
-		}
-
+        }
 		public EntityManager(DbContext currentContext = null)
-		{
+        {
 			if (currentContext != null)
 				suppliedContext = currentContext;
 		}
@@ -1830,4 +1829,5 @@ namespace LucasTecnologiaServices.Modules.Erp.Api
 
 		#endregion
 	}
+
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LucasTecnologiaServices.Modules.Erp.Api.Models
 {
-	public class QueryResponse : BaseResponseModel
+	public class QueryResponse : BaseModel
 	{
 		public QueryResponse()
 		{

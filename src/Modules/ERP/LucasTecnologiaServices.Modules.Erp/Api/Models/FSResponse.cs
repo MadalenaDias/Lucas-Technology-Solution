@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LucasTecnologiaServices.Modules.Erp.Api.Models
 {
-    public class FSResponse : BaseResponseModel
+    public class FSResponse : BaseModel
     {
         [JsonProperty(PropertyName = "object")]
         public FSResult Object { get; set; }

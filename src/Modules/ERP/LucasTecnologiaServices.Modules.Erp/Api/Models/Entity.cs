@@ -94,19 +94,19 @@ namespace LucasTecnologiaServices.Modules.Erp.Api.Models
 		public List<Guid> CanDelete { get; set; } = new List<Guid>();
 	}
 
-	public class EntityResponse : BaseResponseModel
+	public class EntityResponse : BaseModel
 	{
 		[JsonProperty(PropertyName = "object")]
 		public Entity Object { get; set; }
 	}
 
-	public class EntityListResponse : BaseResponseModel
+	public class EntityListResponse : BaseModel
 	{
 		[JsonProperty(PropertyName = "object")]
 		public List<Entity> Object { get; set; }
 	}
 
-	public class EntityLibraryItemsResponse : BaseResponseModel
+	public class EntityLibraryItemsResponse : BaseModel
 	{
 		[JsonProperty(PropertyName = "object")]
 		public List<object> Object { get; set; }

@@ -6,22 +6,22 @@ using System.Threading.Tasks;
 
 namespace LucasTecnologiaServices.Modules.Erp.Api.Models.FieldType
 {
-	public class InputCheckboxField : InputField
+	public class InputFileField : InputField
 	{
 		[JsonProperty(PropertyName = "fieldType")]
-		public static FieldType FieldType { get { return FieldType.CheckboxField; } }
+		public static FieldType FieldType { get { return FieldType.FileField; } }
 
 		[JsonProperty(PropertyName = "defaultValue")]
-		public bool? DefaultValue { get; set; }
+		public string DefaultValue { get; set; }
 	}
 
 	[Serializable]
-	public class CheckboxField : Field
+	public class FileField : Field
 	{
 		[JsonProperty(PropertyName = "fieldType")]
-		public static FieldType FieldType { get { return FieldType.CheckboxField; } }
+		public static FieldType FieldType { get { return FieldType.FileField; } }
 
 		[JsonProperty(PropertyName = "defaultValue")]
-		public bool? DefaultValue { get; set; }
+		public string DefaultValue { get; set; }
 	}
 }

@@ -102,14 +102,14 @@ namespace LucasTecnologiaServices.Modules.Erp.Api.Models
     }
 
     [Serializable]
-    public class EntityRelationResponse : BaseResponseModel
+    public class EntityRelationResponse : BaseModel
     {
         [JsonProperty(PropertyName = "object")]
         public EntityRelation Object { get; set; }
     }
 
     [Serializable]
-    public class EntityRelationListResponse : BaseResponseModel
+    public class EntityRelationListResponse : BaseModel
     {
         [JsonProperty(PropertyName = "object")]
         public List<EntityRelation> Object { get; set; }
