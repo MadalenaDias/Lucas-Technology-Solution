@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace LucasTecnologiaServices.Modules.Erp.Eql
 {
-    internal enum EqlRelationDirectionType
-    {
-    }
+	internal enum EqlRelationDirectionType
+	{
+		TargetOrigin,
+		OriginTarget
+	}
 }

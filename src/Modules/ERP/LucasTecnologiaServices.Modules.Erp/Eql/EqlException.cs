@@ -6,7 +6,26 @@ using System.Threading.Tasks;
 
 namespace LucasTecnologiaServices.Modules.Erp.Eql
 {
-    public class EqlException
-    {
-    }
+	public class EqlException : Exception
+	{
+
+
+		public List<EqlError> Errors { get; private set; } = new List<EqlError>();
+
+		public EqlException(string message) : base(string.IsNullOrWhiteSpace(message) ? "One or more Eql errors occurred." : message)
+		{
+			Errors.Add(new EqlError { Message = message });
+		}
+
+		public EqlException(EqlError error) : base(error?.Message ?? "One or more Eql errors occurred.")
+		{
+			Errors.Add(error);
+		}
+
+		public EqlException(List<EqlError> errors) : base("One or more Eql errors occurred.")
+		{
+			if (errors != null)
+				Errors.AddRange(errors);
+		}
+	}
 }
