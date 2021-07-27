@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace LucasTecnologiaServices.Modules.Erp.Api.Models
 {
-    public class EntityRecord
+    [Serializable]
+    public class EntityRecord : Expando
     {
     }
 }

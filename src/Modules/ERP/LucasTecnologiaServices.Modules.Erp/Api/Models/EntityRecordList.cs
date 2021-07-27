@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace LucasTecnologiaServices.Modules.Erp.Api.Models
 {
-    public class EntityRecordList
-    {
-    }
+	public class EntityRecordList : List<EntityRecord>
+	{
+		[JsonProperty(PropertyName = "total_count")]
+		public int TotalCount { get; set; } = 0;
+	}
 }

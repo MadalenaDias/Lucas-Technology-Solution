@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace LucasTecnologiaServices.Modules.Erp.Api.Models
 {
-    public class SearchResultList
-    {
-    }
+	public class SearchResultList : List<SearchResult>
+	{
+		public int TotalCount { get; set; } = 0;
+	}
 }

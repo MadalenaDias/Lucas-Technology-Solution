@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace LucasTecnologiaServices.Modules.Erp.Api.Models
 {
-    public enum SearchType
-    {
-    }
+	public enum SearchType
+	{
+		Contains = 0,
+		Fts = 1
+	}
 }
+

@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace LucasTecnologiaServices.Modules.Erp.Api.Models
 {
-    public class QueryCountResponse
+    public class QueryCountResponse : BaseModel
     {
+        [JsonProperty(PropertyName = "object")]
+        public long Object { get; set; }
     }
 }
