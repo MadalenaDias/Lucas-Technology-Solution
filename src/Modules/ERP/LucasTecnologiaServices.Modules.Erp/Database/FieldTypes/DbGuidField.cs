@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace LucasTecnologiaServices.Modules.Erp.Database.FieldTypes
 {
-    public class DbGuidField
-    {
-    }
+	public class DbGuidField : DbBaseField
+	{
+		[JsonProperty(PropertyName = "default_value")]
+		public Guid? DefaultValue { get; set; }
+
+		[JsonProperty(PropertyName = "generate_new_id")]
+		public bool? GenerateNewId { get; set; }
+	}
 }

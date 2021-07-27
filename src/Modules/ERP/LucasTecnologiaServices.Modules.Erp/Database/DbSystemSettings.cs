@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace LucasTecnologiaServices.Modules.Erp.Database
 {
-    public class DbSystemSettings
+    public class DbSystemSettings : DbDocumentBase
     {
+        [JsonProperty(PropertyName = "version")]
+        public int Version { get; set; }
     }
 }

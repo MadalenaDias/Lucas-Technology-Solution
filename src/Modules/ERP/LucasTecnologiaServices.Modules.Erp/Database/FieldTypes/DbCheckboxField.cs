@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace LucasTecnologiaServices.Modules.Erp.Database.FieldTypes
 {
-    public class DbCheckboxField
+    public class DbCheckboxField : DbBaseField
     {
+        [JsonProperty(PropertyName = "default_value")]
+        public bool DefaultValue { get; set; }
     }
 }
