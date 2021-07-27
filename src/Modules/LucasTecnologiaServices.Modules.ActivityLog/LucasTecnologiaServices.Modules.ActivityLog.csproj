@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\LucasTecnologiaServices.Infrastructure\LucasTecnologiaServices.Infrastructure.csproj" />
+    <ProjectReference Include="..\LucasTecnologiaServices.Modules.Core\LucasTecnologiaServices.Modules.Core.csproj" />
   </ItemGroup>
 
   <ItemGroup>

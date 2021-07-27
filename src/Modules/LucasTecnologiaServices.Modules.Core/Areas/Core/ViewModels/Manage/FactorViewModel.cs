@@ -8,5 +8,6 @@ namespace LucasTecnologiaServices.Modules.Core.Areas.ViewModels.Manage
 {
     public class FactorViewModel
     {
+        public string Purpose { get; set; }
     }
 }

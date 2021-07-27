@@ -1,4 +1,8 @@
 ﻿using LucasTecnologiaServices.Infrastructure.Data;
+using LucasTecnologiaServices.Modules.Core.Events;
+using LucasTecnologiaServices.Modules.Core.Extensions;
+using LucasTecnologiaServices.Modules.ActivityLog.Models;
+using MediatR;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -6,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using Activity = LucasTecnologiaServices.Modules.ActivityLog.Models.Activity;
 
 namespace LucasTecnologiaServices.Modules.ActivityLog.Events
 {

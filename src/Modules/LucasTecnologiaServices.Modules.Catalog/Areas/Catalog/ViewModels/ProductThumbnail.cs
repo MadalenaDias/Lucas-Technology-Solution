@@ -1,4 +1,6 @@
-﻿using System;
+﻿using LucasTecnologiaServices.Modules.Catalog.Models;
+using LucasTecnologiaServices.Modules.Core.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;

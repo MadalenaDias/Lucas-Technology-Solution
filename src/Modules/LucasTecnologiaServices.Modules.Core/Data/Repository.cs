@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace LucasTecnologiaServices.Modules.Core.Data
 {
-    public class Repository<T> : IRepositoryWithTypedId<T, long>, IRepository<T>
+    public class Repository<T> : RepositoryWithTypedId<T, long>, IRepository<T>
         where T : class, IEntityWithTypedId<long>
 
     {

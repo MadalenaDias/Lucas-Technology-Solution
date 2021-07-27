@@ -2,6 +2,7 @@
 using LucasTecnologiaServices.Infrastructure.Web.SmartTable;
 using LucasTecnologiaServices.Modules.Catalog.Areas.Catalog.ViewModels;
 using LucasTecnologiaServices.Modules.Catalog.Models;
+using LucasTecnologiaServices.Modules.Core.Extensions;
 using LucasTecnologiaServices.Modules.Core.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;

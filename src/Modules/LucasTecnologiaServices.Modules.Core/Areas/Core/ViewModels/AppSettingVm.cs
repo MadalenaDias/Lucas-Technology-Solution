@@ -8,5 +8,8 @@ namespace LucasTecnologiaServices.Modules.Core.Areas.ViewModels
 {
     public class AppSettingVm
     {
+        public string Key { get; set; }
+
+        public string Value { get; set; }
     }
 }

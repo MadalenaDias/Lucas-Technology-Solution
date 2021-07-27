@@ -1,4 +1,6 @@
 ﻿using LucasTecnologiaServices.Modules.ActivityLog.Models;
+using LucasTecnologiaServices.Modules.Core.Data;
+using LucasTecnologiaServices.Modules.Core.Models;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -12,7 +14,7 @@ namespace LucasTecnologiaServices.Modules.ActivityLog.Data
     {
         private const int MostViewActivityTypeId = 1;
 
-        public ActivityRepository(SimplDbContext context) : base(context)
+        public ActivityRepository(LucasTechnologyDbContext context) : base(context)
         {
         }
 

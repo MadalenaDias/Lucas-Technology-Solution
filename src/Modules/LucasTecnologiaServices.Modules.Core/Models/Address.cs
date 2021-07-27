@@ -49,6 +49,7 @@ namespace LucasTecnologiaServices.Modules.Core.Models
         public string CountryId { get; set; }
 
         public Country Country { get; set; }
+        public IList<UserAddress> UserAddresses { get; set; } = new List<UserAddress>();
 
     }
 }

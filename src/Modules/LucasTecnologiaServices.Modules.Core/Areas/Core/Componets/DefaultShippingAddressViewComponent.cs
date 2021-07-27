@@ -1,5 +1,11 @@
 ﻿using LucasTecnologiaServices.Infrastructure.Data;
+using LucasTecnologiaServices.Infrastructure.Web;
+using LucasTecnologiaServices.Modules.Core.Areas.Core.ViewModels;
+using LucasTecnologiaServices.Modules.Core.Areas.ViewModels.Manage;
+using LucasTecnologiaServices.Modules.Core.Extensions;
+using LucasTecnologiaServices.Modules.Core.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,6 +16,7 @@ namespace LucasTecnologiaServices.Modules.Core.Areas.Core.Componets
 {
     public class DefaultShippingAddressViewComponent : ViewComponent
     {
+
         private readonly IRepository<UserAddress> _userAddressRepository;
         private readonly IWorkContext _workContext;
 
