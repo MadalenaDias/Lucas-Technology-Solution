@@ -2,7 +2,7 @@
 //using System.Collections.Generic;
 //using WebVella.Erp.Api.Models;
 
-//namespace WebVella.Erp.Hooks
+//namespace LucasTecnologiaServices.Modeules.Erp.Hooks
 //{
 //    public abstract class ErpRecordHook : ErpBaseHook
 //    {

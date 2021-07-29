@@ -1,4 +1,4 @@
-﻿//namespace WebVella.Erp.Hooks
+﻿//namespace LucasTecnologiaServices.Modeules.Erp.Hooks
 //{
 //	internal class HookInfo
 //	{
@@ -21,7 +21,7 @@
 using LucasTecnologiaServices.Modules.Erp.Hooks;
 using System;
 
-namespace WebVella.Erp.Hooks
+namespace LucasTecnologiaServices.Modeules.Erp.Hooks
 {
 	public class HookInfo
 	{

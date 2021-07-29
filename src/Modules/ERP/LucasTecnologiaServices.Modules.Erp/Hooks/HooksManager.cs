@@ -1,9 +1,9 @@
 ﻿//using System;
 //using System.Collections.Generic;
 //using System.Linq;
-//using WebVella.Erp.Api.Models;
+//using LucasTecnologiaServices.Modeules.Erp.Api.Models;
 
-//namespace WebVella.Erp.Hooks
+//namespace LucasTecnologiaServices.Modeules.Erp.Hooks
 //{
 //	internal static class HooksManager
 //	{

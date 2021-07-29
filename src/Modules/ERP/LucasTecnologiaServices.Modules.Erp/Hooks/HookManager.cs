@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using WebVella.Erp.Hooks;
+using LucasTecnologiaServices.Modules.Erp.Hooks;
 
 namespace LucasTecnologiaServices.Modules.Erp.Hooks
 {
