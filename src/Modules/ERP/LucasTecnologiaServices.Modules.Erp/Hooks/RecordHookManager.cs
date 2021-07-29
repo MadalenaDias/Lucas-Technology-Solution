@@ -146,4 +146,4 @@ namespace LucasTecnologiaServices.Modules.Erp.Hooks
 	}
 }
 
-}
+

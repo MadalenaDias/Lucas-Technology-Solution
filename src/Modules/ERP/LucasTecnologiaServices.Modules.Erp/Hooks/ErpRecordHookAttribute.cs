@@ -1,6 +1,6 @@
 ﻿//using System;
 
-//namespace WebVella.Erp.Hooks
+//namespace LucasTecnologiaServices.Modules.Erp.Hooks
 //{
 //	public class ErpRecordHookAttribute : Attribute
 //    {

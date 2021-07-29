@@ -1,4 +1,4 @@
-﻿//namespace WebVella.Erp.Hooks
+﻿//namespace LucasTecnologiaServices.Modules.Erp.Hooks
 //{
 //    public abstract class ErpBaseHook
 //    {
