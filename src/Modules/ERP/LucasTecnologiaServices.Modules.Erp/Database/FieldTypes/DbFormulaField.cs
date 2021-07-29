@@ -1,12 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace LucasTecnologiaServices.Modules.Erp.Database.FieldTypes
+﻿namespace WebVella.Erp.Database
 {
-    public class DbFormulaField
-    {
-    }
+    //Not supported at the moment
+    //public class DbFormulaField : DbBaseField
+    //{
+    //    public FormulaFieldReturnType ReturnType { get; set; }
+
+    //    public string FormulaText { get; set; }
+
+    //    public int DecimalPlaces { get; set; }
+    //}
 }

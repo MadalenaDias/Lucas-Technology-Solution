@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace LucasTecnologiaServices.Modules.Erp.Database.FieldTypes
 {
-    public class DbImageField
+    public class DbImageField : DbBaseField
     {
+        [JsonProperty(PropertyName = "default_value")]
+        public string DefaultValue { get; set; }
     }
 }

@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace LucasTecnologiaServices.Modules.Erp.Database
 {
-    public class DbException
-    {
-    }
+	public class DbException : Exception
+	{
+		public DbException(string message) : base(message)
+		{
+		}
+	}
 }

@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace LucasTecnologiaServices.Modules.Erp.Database
 {
-    public class DbDocumentBase
-    {
-    }
+	public abstract class DbDocumentBase
+	{
+		[JsonProperty(PropertyName = "id")]
+		public Guid Id { get; set; }
+	}
 }
