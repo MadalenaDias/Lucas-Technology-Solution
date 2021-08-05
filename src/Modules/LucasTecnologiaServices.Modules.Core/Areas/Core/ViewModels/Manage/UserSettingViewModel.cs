@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LucasTecnologiaServices.Modules.Core.Extensions.Settings;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;

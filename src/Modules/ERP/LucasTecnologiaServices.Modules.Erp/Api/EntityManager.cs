@@ -1,5 +1,7 @@
 ﻿using LucasTecnologiaServices.Modules.Erp.Api.Models;
 using LucasTecnologiaServices.Modules.Erp.Api.Models.FieldType;
+using LucasTecnologiaServices.Modules.Erp.Database;
+using LucasTecnologiaServices.Modules.Erp.Utilities.Dynamic;
 using System;
 using System.Collections.Generic;
 using System.Data.Common;

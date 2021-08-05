@@ -1,4 +1,6 @@
 ﻿using LucasTecnologiaServices.Modules.Erp.Api.Models;
+using LucasTecnologiaServices.Modules.Erp.Api.Models.FieldType;
+using LucasTecnologiaServices.Modules.Erp.Database;
 using Microsoft.VisualBasic.FileIO;
 using System;
 using System.Collections.Generic;

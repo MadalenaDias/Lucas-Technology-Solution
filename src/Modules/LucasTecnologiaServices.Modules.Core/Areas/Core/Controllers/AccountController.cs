@@ -9,5 +9,6 @@ namespace LucasTecnologiaServices.Modules.Core.Areas.Core.Controllers
 {
     public class AccountController : Controller
     {
+       
     }
 }

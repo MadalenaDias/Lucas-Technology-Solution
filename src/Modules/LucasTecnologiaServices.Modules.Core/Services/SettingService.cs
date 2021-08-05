@@ -1,5 +1,7 @@
 ﻿using LucasTecnologiaServices.Infrastructure.Extensions;
 using LucasTecnologiaServices.Infrastructure.Models;
+using LucasTecnologiaServices.Modules.Core.Extensions;
+using LucasTecnologiaServices.Modules.Core.Extensions.Settings;
 using LucasTecnologiaServices.Modules.Core.Models;
 using Microsoft.AspNetCore.Identity;
 using System;
