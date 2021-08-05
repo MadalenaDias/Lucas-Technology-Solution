@@ -1,13 +1,37 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using LucasTecnologiaServices.Modules.Core.Services;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace LucasTecnologiaServices.Modules.Core.Areas.Core.Controllers
 {
+    [Area("Core")]
+    [Authorize(Roles = "admin")]
+    [Route("api/common")]
     public class CommonApiController : Controller
     {
+        private readonly IMediaService _mediaService;
+
+        public CommonApiController(IMediaService mediaService)
+        {
+            _mediaService = mediaService;
+        }
+
+        [HttpPost("upload")]
+        public async Task<IActionResult> UploadFile(IFormFile file)
+        {
+            var originalFileName = ContentDispositionHeaderValue.Parse(file.ContentDisposition).FileName.Value.Trim('"');
+            var fileName = $"{Guid.NewGuid()}{Path.GetExtension(originalFileName)}";
+            await _mediaService.SaveMediaAsync(file.OpenReadStream(), fileName, file.ContentType);
+
+            return Ok(_mediaService.GetMediaUrl(fileName));
+        }
     }
 }
