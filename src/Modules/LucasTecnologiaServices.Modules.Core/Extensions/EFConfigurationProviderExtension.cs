@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace LucasTecnologiaServices.Modules.Core.Extensions
 {
-    public class EFConfigurationProviderExtension
+    public static class EFConfigurationProviderExtension
     {
+        public static IConfigurationBuilder AddEntityFrameworkConfig(this IConfigurationBuilder builder, Action<DbContextOptionsBuilder> setup)
+        {
+            return builder.Add(new EFConfigSource(setup));
+        }
     }
 }
