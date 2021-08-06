@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LucasTecnologiaServices.Modules.Core.Models
 {
-    public class LucasTecnologiaConstants
+    public class SimplConstants
     {
         public const string ThemeConfigKey = "Theme";
     }
