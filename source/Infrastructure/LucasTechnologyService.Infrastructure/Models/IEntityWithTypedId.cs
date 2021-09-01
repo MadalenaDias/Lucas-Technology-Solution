@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LucasTechnologyService.Infrastructure.Models
 {
-    public class ExtendableObjectExtensions
+    public interface IEntityWithTypedId<Id>
     {
     }
 }

@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace LucasTechnologyService.Infrastructure.Models
 {
-    public class ExtendableObjectExtensions
+    public interface IExtendableObject
     {
+        string ExtensionData { get; set; }
     }
 }
