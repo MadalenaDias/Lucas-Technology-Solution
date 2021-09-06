@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LucasTechnologyService.Infrastructure.Models
 {
-    public abstract class EntityBaseWithTypedId<TId> ValidatableObject, IEntityWithTypedId<Id>
+    public abstract class EntityBaseWithTypedId<TId> : ValidatableObject, IEntityWithTypedId<TId>
     {
         public virtual TId Id { get; protected set; }
     }

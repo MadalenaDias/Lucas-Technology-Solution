@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,8 +16,9 @@ namespace LucasTechnologyService.Infrastructure.Models
 
         public virtual IList<ValidationResult> Validate()
         {
-            IList<ValidationResult> validationResult = new List<ValidationResult>();
-            validator.
+            IList<ValidationResult> validationResults = new List<ValidationResult>();
+            Validator.TryValidateObject(this, new ValidationContext(this, null, null), validationResults, true);
+            return validationResults;
         }
     }
 }

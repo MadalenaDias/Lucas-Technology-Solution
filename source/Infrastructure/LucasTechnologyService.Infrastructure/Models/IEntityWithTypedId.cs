@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace LucasTechnologyService.Infrastructure.Models
 {
-    public interface IEntityWithTypedId<Id>
+    public interface IEntityWithTypedId<TId>
     {
+        TId Id { get; }
     }
 }
