@@ -9,6 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\..\Infrastructure\LucasTechnologyService.Infrastructure\LucasTechnologyService.Infrastructure.csproj" />
     <ProjectReference Include="..\..\..\Modules\LucasTechnologyServices.Module.Core\LucasTechnologyServices.Module.Core.csproj" />
   </ItemGroup>
 
