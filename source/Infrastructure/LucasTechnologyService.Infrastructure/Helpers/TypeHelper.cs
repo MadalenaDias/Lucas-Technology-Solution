@@ -65,9 +65,6 @@ namespace LucasTechnologyService.Infrastructure.Helpers
                    type == typeof(Guid);
         }
 
-        internal static bool IsPrimitiveExtendedincludingNullabke(Type type)
-        {
-            throw new NotImplementedException();
-        }
+        
     }
 }
