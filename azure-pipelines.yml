@@ -16,7 +16,7 @@ jobs:
     inputs:
       packageType: 'sdk'
       version: '5.0.100'
-  - script: dotnet build ./LucasTechnologyServices.sln
+  - script: dotnet build ./source/LucasTechnologyServices.sln
     displayName: 'dotnet build'
   - task: DotNetCoreCLI@2
     displayName: 'run tests'
@@ -48,7 +48,7 @@ jobs:
     inputs:
       packageType: 'sdk'
       version: '5.0.100'
-  - script: dotnet build ./LucasTechnologyServices.sln
+  - script: dotnet build ./source/LucasTechnologyServices.sln
     displayName: 'dotnet build'
   - task: DotNetCoreCLI@2
     displayName: 'run tests'
@@ -86,7 +86,7 @@ jobs:
       command: 'restore'
       projects: '**/*/*.csproj'
       includeNuGetOrg: true
-  - script: dotnet build ./LucasTechnologyServices.sln
+  - script: dotnet build ./source/LucasTechnologyServices.sln
     displayName: 'dotnet build'
   - task: DotNetCoreCLI@2
     displayName: 'run tests'
