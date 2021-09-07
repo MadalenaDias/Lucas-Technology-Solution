@@ -120,8 +120,9 @@ jobs:
     inputs:
       packageType: 'sdk'
       version: '5.0.100'
-  - script: dotnet build --configuration $(buildConfiguration)
-    displayName: 'dotnet build $(buildConfiguration)'
+  - script: dotnet build ./source/LucasTechnologyServices.sln
+    displayName: 'dotnet build'
+  
   - task: DotNetCoreCLI@2
     displayName: 'run tests'
     inputs:
