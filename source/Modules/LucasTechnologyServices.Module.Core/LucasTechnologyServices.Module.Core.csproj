@@ -9,4 +9,8 @@
     <PackageReference Include="newtonsoft.Json" Version="13.0.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\Infrastructure\LucasTechnologyService.Infrastructure\LucasTechnologyService.Infrastructure.csproj" />
+  </ItemGroup>
+
 </Project>
