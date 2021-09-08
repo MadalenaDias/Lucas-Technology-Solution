@@ -9,14 +9,14 @@ namespace LucasTechnologyService.Infrastructure.Modules
 {
     public class ModuleInfo
     {
-        public string Id { get; private set; }
+        public string Id { get; set; }
 
-        public string Name { get; private set; }
+        public string Name { get; set; }
 
-        public bool IsBundledWithHost { get; private set; }
+        public bool IsBundledWithHost { get; set; }
 
-        public Version Version { get; private set; }
+        public Version Version { get; set; }
 
-        public Assembly Assembly { get; private set; }
+        public Assembly Assembly { get; set; }
     }
 }
