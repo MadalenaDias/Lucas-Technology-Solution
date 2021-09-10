@@ -10,7 +10,7 @@ namespace LucasTechnologyService.Infrastructure
 {
     public class GlobalConfiguration
     {
-         public static IList<ModuleInfo> Modules { get; set; } = new List<ModuleInfo>();
+        public static IList<ModuleInfo> Modules { get; set; } = new List<ModuleInfo>();
 
         public static IList<Culture> Cultures { get; set; } = new List<Culture>();
 
