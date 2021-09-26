@@ -1,5 +1,4 @@
 ﻿using LucasTechnologyService.Infrastructure.Data;
-using LucasTechnologyService.Infrastructure.Data.Repositories;
 using LucasTechnologyService.Infrastructure.Models;
 using LucasTechnologyServices.Module.Core.Data.EFCore;
 using System;
