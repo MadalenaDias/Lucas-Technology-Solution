@@ -20,16 +20,16 @@ namespace LucasTechnologyServices.Module.Core.Models
 
 
         [StringLength(450)]
-        public string Name { get; private set; }
+        public string Name { get; set; }
 
         [Required(ErrorMessage = "The {0} field is required.")]
-        public Document Document { get; private set; }
+        public Document Document { get; set; }
 
-        public Email Email { get; private set; }
+        public Email Email { get; set; }
 
         [Required(ErrorMessage = "The {0} field is required.")]
         [StringLength(21)]
-        public string Phone { get; private set; }
+        public string Phone { get; set; }
         public IReadOnlyCollection<Address> Addresses => _addresses.ToArray();
 
         public void AddAddress(Address address)

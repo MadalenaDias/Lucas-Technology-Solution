@@ -11,7 +11,7 @@ namespace LucasTechnologyServices.Module.Core.Areas.ViewModels
     {
         public long Id { get; set; }
         
-        [Required(ErrorMessage = "The {0} field is required"]
+        [Required(ErrorMessage = "The {0} field is required")]
         public string Name { get; set; }
 
         public long WidgetZoneid { get; set; }

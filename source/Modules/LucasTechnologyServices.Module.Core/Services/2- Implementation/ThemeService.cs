@@ -1,23 +1,23 @@
 ﻿using LucasTechnologyService.Infrastructure;
-using LucasTechnologyService.Infrastructure.Data.Repositories.Common.EFCore;
+
 using LucasTechnologyServices.Module.Core.Areas.ViewModels;
 using LucasTechnologyServices.Module.Core.Models;
 using LucasTechnologyServices.Module.Core.Services._1_Interfaces;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.IO;
 using System.IO.Compression;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
+using LucasTechnologyService.Infrastructure.Data;
 
 namespace LucasTechnologyServices.Module.Core.Services._2__Implementation
 {
     public class ThemeService : IThemeService
     {
-
         private readonly IConfigurationRoot _configurationRoot;
         private readonly IRepositoryWithTypedId<AppSetting, string> _appSettingRepository;
         private string _currentThemeName;
@@ -72,7 +72,7 @@ namespace LucasTechnologyServices.Module.Core.Services._2__Implementation
 
         public async Task SetCurrentTheme(string themeName)
         {
-            var themeSetting = await _appSettingRepository.Query().Where(x => x.Id == SimplConstants.ThemeConfigKey).FirstAsync();
+            var themeSetting = await _appSettingRepository.Query().Where(x => x.Id == LTSConstants.ThemeConfigKey).FirstAsync();
             themeSetting.Value = themeName;
             await _appSettingRepository.SaveChangesAsync();
             _configurationRoot.Reload();
@@ -150,6 +150,7 @@ namespace LucasTechnologyServices.Module.Core.Services._2__Implementation
                 }
             }
         }
+
 
     }
 }

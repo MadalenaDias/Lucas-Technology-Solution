@@ -6,23 +6,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LucasTechnologyService.Infrastructure.Data.Repositories.Common.EFCore
+namespace LucasTechnologyService.Infrastructure.Data
 {
     public interface IRepositoryWithTypedId<T, TId> where T : IEntityWithTypedId<TId>
     {
-        
         IQueryable<T> Query();
-        
         void Add(T entity);
-        
-        
-        void Addranger(IEnumerable<T> entity);
-        IDbContextTransaction Beggintransaction();
-
+        void AddRange(IEnumerable<T> entity);
+        IDbContextTransaction BeginTransaction();
         void SaveChanges();
-
-        Task DavechangesAsync();
-
+        Task SaveChangesAsync();
         void Remove(T entity);
     }
 }
