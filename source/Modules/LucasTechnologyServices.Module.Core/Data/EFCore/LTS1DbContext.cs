@@ -1,11 +1,15 @@
 ﻿using LucasTechnologyService.Infrastructure;
+using LucasTechnologyService.Infrastructure.Data;
+using LucasTechnologyService.Infrastructure.Models;
 using LucasTechnologyServices.Module.Core.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -18,12 +22,10 @@ namespace LucasTechnologyServices.Module.Core.Data.EFCore
         {
 
         }
-
         public override int SaveChanges(bool acceptAllChangesOnSuccess)
         {
             ValidateEntities();
             return base.SaveChanges(acceptAllChangesOnSuccess);
-
         }
 
         public override Task<int> SaveChangesAsync(bool acceptAllChangesOnSuccess, CancellationToken cancellationToken = default(CancellationToken))
@@ -41,30 +43,100 @@ namespace LucasTechnologyServices.Module.Core.Data.EFCore
             }
 
             RegisterEntities(modelBuilder, typeToRegisters);
-            RegisterConvertion(modelBuilder);
+
+            RegisterConvention(modelBuilder);
+
             base.OnModelCreating(modelBuilder);
 
             RegisterCustomMappings(modelBuilder, typeToRegisters);
-        }
 
-        private void RegisterCustomMappings(ModelBuilder modelBuilder, List<Type> typeToRegisters)
-        {
-            throw new NotImplementedException();
-        }
+            if (Database.ProviderName == "Microsoft.EntityFrameworkCore.Sqlite")
+            {
+                // SQLite does not have proper support for DateTimeOffset via Entity Framework Core, see the limitations
+                // here: https://docs.microsoft.com/en-us/ef/core/providers/sqlite/limitations#query-limitations
+                // To work around this, when the Sqlite database provider is used, all model properties of type DateTimeOffset
 
-        private void RegisterConvertion(ModelBuilder modelBuilder)
-        {
-            throw new NotImplementedException();
-        }
+                foreach (var entityType in modelBuilder.Model.GetEntityTypes())
+                {
+                    var properties = entityType.ClrType.GetProperties().Where(p => p.PropertyType == typeof(DateTimeOffset) || p.PropertyType == typeof(DateTimeOffset?));
+                    foreach (var property in properties)
+                    {
+                        modelBuilder
+                            .Entity(entityType.Name)
+                            .Property(property.Name)
+                            .HasConversion(new DateTimeOffsetToBinaryConverter());
+                    }
 
-        private void RegisterEntities(ModelBuilder modelBuilder, List<Type> typeToRegisters)
-        {
-            throw new NotImplementedException();
+                    var decimalProperties = entityType.ClrType.GetProperties().Where(p => p.PropertyType == typeof(decimal) || p.PropertyType == typeof(decimal?));
+                    foreach (var property in decimalProperties)
+                    {
+                        modelBuilder
+                            .Entity(entityType.Name)
+                            .Property(property.Name)
+                            .HasConversion<double>();
+                    }
+                }
+            }
         }
 
         private void ValidateEntities()
         {
-            throw new NotImplementedException();
+            var modifiedEntries = ChangeTracker.Entries()
+                    .Where(x => (x.State == EntityState.Added || x.State == EntityState.Modified));
+
+            foreach (var entity in modifiedEntries)
+            {
+                if (entity.Entity is ValidatableObject validatableObject)
+                {
+                    var validationResults = validatableObject.Validate();
+                    if (validationResults.Any())
+                    {
+                        throw new ValidationException(entity.Entity.GetType(), validationResults);
+                    }
+                }
+            }
         }
+
+        private static void RegisterConvention(ModelBuilder modelBuilder)
+        {
+            foreach (var entity in modelBuilder.Model.GetEntityTypes())
+            {
+                if (entity.ClrType.Namespace != null)
+                {
+                    var nameParts = entity.ClrType.Namespace.Split('.');
+                    var tableName = string.Concat(nameParts[2], "_", entity.ClrType.Name);
+                    modelBuilder.Entity(entity.Name).ToTable(tableName);
+                }
+            }
+
+            foreach (var relationship in modelBuilder.Model.GetEntityTypes().SelectMany(e => e.GetForeignKeys()))
+            {
+                relationship.DeleteBehavior = DeleteBehavior.Restrict;
+            }
+        }
+
+        private static void RegisterEntities(ModelBuilder modelBuilder, IEnumerable<Type> typeToRegisters)
+        {
+            var entityTypes = typeToRegisters.Where(x => x.GetTypeInfo().IsSubclassOf(typeof(EntityBase)) && !x.GetTypeInfo().IsAbstract);
+            foreach (var type in entityTypes)
+            {
+                modelBuilder.Entity(type);
+            }
+        }
+
+        private static void RegisterCustomMappings(ModelBuilder modelBuilder, IEnumerable<Type> typeToRegisters)
+        {
+            var customModelBuilderTypes = typeToRegisters.Where(x => typeof(ICustomModelBuilder).IsAssignableFrom(x));
+            foreach (var builderType in customModelBuilderTypes)
+            {
+                if (builderType != null && builderType != typeof(ICustomModelBuilder))
+                {
+                    var builder = (ICustomModelBuilder)Activator.CreateInstance(builderType);
+                    builder.Build(modelBuilder);
+                }
+            }
+        }
+
+
     }
 }
