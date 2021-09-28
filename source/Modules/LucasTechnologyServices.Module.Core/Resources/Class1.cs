@@ -8,5 +8,7 @@ namespace LucasTechnologyServices.Module.Core.Resources
 {
     public class Class1
     {
+
+        //kkkikikk
     }
 }
