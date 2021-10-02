@@ -16,14 +16,14 @@ jobs:
     inputs:
       packageType: 'sdk'
       version: '5.0.100'
-  - script: dotnet build ./ExpressStore-DMS002/SimplCommerce.sln
+  - script: dotnet build /ExpressStore-DMS002/SimplCommerce.sln
     displayName: 'dotnet build'
   - task: DotNetCoreCLI@2
     displayName: 'run tests'
     inputs:
       command: test
       arguments:  '--logger trx /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura /p:Exclude=[xunit.*]*%2c[System.*]*'
-      projects: 'ExpressStore-DMS002/test/**/*.csproj'
+      projects: '/ExpressStore-DMS002/test/**/*.csproj'
       nobuild: true
   - task: DotNetCoreCLI@2
     inputs:
