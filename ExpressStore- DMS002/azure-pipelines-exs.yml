@@ -23,7 +23,7 @@ jobs:
     inputs:
       command: test
       arguments:  '--logger trx /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura /p:Exclude=[xunit.*]*%2c[System.*]*'
-      projects: '/ExpressStore-DMS002/test/**/*.csproj'
+      projects: 'test/**/*.csproj'
       nobuild: true
   - task: DotNetCoreCLI@2
     inputs:
@@ -55,7 +55,7 @@ jobs:
     inputs:
       command: test
       arguments:  '--logger trx /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura /p:Exclude=[xunit.*]*%2c[System.*]*'
-      projects: 'ExpressSore=DMS002/test/**/*.csproj'
+      projects: 'test/**/*.csproj'
       nobuild: true
   - task: DotNetCoreCLI@2
     inputs:
@@ -93,7 +93,7 @@ jobs:
     inputs:
       command: test
       arguments:  '--logger trx /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura /p:Exclude=[xunit.*]*%2c[System.*]*'
-      projects: 'ExpressStore-DMS002/test/**/*.csproj'
+      projects: 'test/**/*.csproj'
       nobuild: true
   - task: DotNetCoreCLI@2
     inputs:
@@ -127,7 +127,7 @@ jobs:
     inputs:
       command: test
       arguments:  '--configuration $(buildConfiguration) --logger trx /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura /p:Exclude=[xunit.*]*%2c[System.*]*'
-      projects: 'Express Store-DMS002/test/**/*.csproj'
+      projects: 'test/**/*.csproj'
       nobuild: true
   - task: DotNetCoreCLI@2
     inputs:
