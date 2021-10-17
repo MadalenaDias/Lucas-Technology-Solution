@@ -16,14 +16,14 @@ jobs:
     inputs:
       packageType: 'sdk'
       version: '5.0.100'
-  - script: dotnet build ./source/LucasTechnologyServices.sln
+  - script: dotnet build ./LTS/source/LucasTechnologyServices.sln
     displayName: 'dotnet build'
   - task: DotNetCoreCLI@2
     displayName: 'run tests'
     inputs:
       command: test
       arguments:  '--logger trx /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura /p:Exclude=[xunit.*]*%2c[System.*]*'
-      projects: 'test/**/*.csproj'
+      projects: 'LTS/test/**/*.csproj'
       nobuild: true
   - task: DotNetCoreCLI@2
     inputs:
@@ -48,14 +48,14 @@ jobs:
     inputs:
       packageType: 'sdk'
       version: '5.0.100'
-  - script: dotnet build ./source/LucasTechnologyServices.sln
+  - script: dotnet build ./LTS/source/LucasTechnologyServices.sln
     displayName: 'dotnet build'
   - task: DotNetCoreCLI@2
     displayName: 'run tests'
     inputs:
       command: test
       arguments:  '--logger trx /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura /p:Exclude=[xunit.*]*%2c[System.*]*'
-      projects: 'test/**/*.csproj'
+      projects: 'LTS/test/**/*.csproj'
       nobuild: true
   - task: DotNetCoreCLI@2
     inputs:
@@ -86,14 +86,14 @@ jobs:
       command: 'restore'
       projects: '**/*/*.csproj'
       includeNuGetOrg: true
-  - script: dotnet build ./source/LucasTechnologyServices.sln
+  - script: dotnet build ./LTS/source/LucasTechnologyServices.sln
     displayName: 'dotnet build'
   - task: DotNetCoreCLI@2
     displayName: 'run tests'
     inputs:
       command: test
       arguments:  '--logger trx /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura /p:Exclude=[xunit.*]*%2c[System.*]*'
-      projects: 'test/**/*.csproj'
+      projects: 'LTS/test/**/*.csproj'
       nobuild: true
   - task: DotNetCoreCLI@2
     inputs:
@@ -120,7 +120,7 @@ jobs:
     inputs:
       packageType: 'sdk'
       version: '5.0.100'
-  - script: dotnet build ./source/LucasTechnologyServices.sln
+  - script: dotnet build ./LTS/source/LucasTechnologyServices.sln
     displayName: 'dotnet build'
   
   - task: DotNetCoreCLI@2
@@ -128,7 +128,7 @@ jobs:
     inputs:
       command: test
       arguments:  '--configuration $(buildConfiguration) --logger trx /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura /p:Exclude=[xunit.*]*%2c[System.*]*'
-      projects: 'test/**/*.csproj'
+      projects: 'LTS/test/**/*.csproj'
       nobuild: true
   - task: DotNetCoreCLI@2
     inputs:
