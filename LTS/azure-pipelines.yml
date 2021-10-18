@@ -31,7 +31,7 @@ jobs:
       custom: tool
       arguments: install --tool-path . dotnet-reportgenerator-globaltool
       displayName: Install ReportGenerator tool
-  - script: ./reportgenerator "-reports:$(Build.SourcesDirectory)/test/**/coverage.cobertura.xml" "-targetdir:$(Build.SourcesDirectory)/coverlet/reports" "-reporttypes:HtmlInline_AzurePipelines;Cobertura"
+  - script: ./reportgenerator "-reports:$(Build.SourcesDirectory)/LTS/test/**/coverage.cobertura.xml" "-targetdir:$(Build.SourcesDirectory)/coverlet/reports" "-reporttypes:HtmlInline_AzurePipelines;Cobertura"
     displayName: Create reports
   - task: PublishCodeCoverageResults@1
     displayName: 'Publish code coverage'
@@ -54,9 +54,9 @@ jobs:
     displayName: 'Restoring code using dotnet restore'
     inputs: 
       command: 'restore'
-      projects: '**/*/*.csproj'
+      projects: 'LTS/**/*/*.csproj'
       includeNuGetOrg: true
-  - script: dotnet build ./source/LucasTechnologyServices.sln
+  - script: dotnet build ./LTS/source/LucasTechnologyServices.sln
     displayName: 'dotnet build'
   - task: DotNetCoreCLI@2
     displayName: 'run tests'
@@ -71,7 +71,7 @@ jobs:
       custom: tool
       arguments: install --tool-path . dotnet-reportgenerator-globaltool
       displayName: Install ReportGenerator tool
-  - script: .\reportgenerator -reports:$(Build.SourcesDirectory)\test\**\coverage.cobertura.xml -targetdir:$(Build.SourcesDirectory)\coverlet\reports -reporttypes:"HtmlInline_AzurePipelines;Cobertura"
+  - script: .\reportgenerator -reports:$(Build.SourcesDirectory)/LTS/test/**/coverage.cobertura.xml -targetdir:$(Build.SourcesDirectory)\coverlet\reports -reporttypes:"HtmlInline_AzurePipelines;Cobertura"
     displayName: Create reports 
   - task: PublishCodeCoverageResults@1
     displayName: 'Publish code coverage'
@@ -106,7 +106,7 @@ jobs:
       custom: tool
       arguments: install --tool-path . dotnet-reportgenerator-globaltool
       displayName: Install ReportGenerator tool
-  - script: ./reportgenerator -reports:$(Build.SourcesDirectory)/test/**/coverage.cobertura.xml -targetdir:$(Build.SourcesDirectory)/coverlet/reports -reporttypes:"HtmlInline_AzurePipelines;Cobertura"
+  - script: ./reportgenerator -reports:$(Build.SourcesDirectory)/LTS/test/**/coverage.cobertura.xml -targetdir:$(Build.SourcesDirectory)/coverlet/reports -reporttypes:"HtmlInline_AzurePipelines;Cobertura"
     displayName: Create reports   
   - task: PublishCodeCoverageResults@1
     displayName: 'Publish code coverage'
