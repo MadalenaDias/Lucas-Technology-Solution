@@ -6,12 +6,39 @@
 trigger:
 - fet/566
 
-pool:
-  vmImage: ubuntu-latest
+jobs:
+- job: Linux
+  pool:
+    vmImage: 'ubuntu-18.04'
+  steps:
+  - task: UseDotNet@2
+    displayName: 'Use .NET Core sdk'
+    inputs:
+      packageType: 'sdk'
+      version: '5.0.100'
 
-variables:
-  buildConfiguration: 'Release'
+  - script: dotnet build ./frontend/LTS.BLZ/LTS.BLZ.sln
 
-steps:
-- script: dotnet build --configuration $(buildConfiguration)
-  displayName: 'dotnet build $(buildConfiguration)'
+
+    displayName: 'dotnet build'
+  - task: DotNetCoreCLI@2
+    displayName: 'run tests'
+    inputs:
+      command: test
+      arguments:  '--logger trx /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura /p:Exclude=[xunit.*]*%2c[System.*]*'
+      projects: 'fronend/LTS-Blazor/testing/**/*.csproj'
+      nobuild: true
+  - task: DotNetCoreCLI@2
+    inputs:
+      command: custom
+      custom: tool
+      arguments: install --tool-path . dotnet-reportgenerator-globaltool
+    displayName: Install ReportGenerator tool
+  - script: ./reportgenerator "-reports:$(Build.SourcesDirectory)/fronend/LTS-Blazor/testing/**/coverage.cobertura.xml" "-targetdir:$(Build.SourcesDirectory)/coverlet/reports" "-reporttypes:HtmlInline_AzurePipelines;Cobertura"
+    displayName: Create reports
+  - task: PublishCodeCoverageResults@1
+    displayName: 'Publish code coverage'
+    inputs:
+      codeCoverageTool: Cobertura
+      summaryFileLocation: $(Build.SourcesDirectory)/coverlet/reports/Cobertura.xml  
+
