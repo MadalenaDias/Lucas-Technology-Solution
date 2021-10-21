@@ -54,7 +54,7 @@ jobs:
     displayName: 'Restoring code using dotnet restore'
     inputs: 
       command: 'restore'
-      projects: 'frontend/LTS-Blazor/LTS.Erp/**/*/*.csproj'
+      projects: './frontend/LTS-Blazor/LTS.Erp/**/*/*.csproj'
       includeNuGetOrg: true
   - script: dotnet build ./frontend/LTS-Blazor/LTS.BLZ/LTS.BLZ.sln
     displayName: 'dotnet build'
