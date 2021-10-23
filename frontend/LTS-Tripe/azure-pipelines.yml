@@ -16,3 +16,12 @@ jobs:
       version: '5.0.100'
   - script: dotnet build ./frontend/LTS-Triple/LTS.sln
     displayName: 'dotnet build'
+  
+  - task: DotNetCoreCLI@2
+    displayName: 'run tests'
+    inputs:
+      command: test
+      arguments:  '--logger trx /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura /p:Exclude=[xunit.*]*%2c[System.*]*'
+      projects: 'frontend/LTS-Triple/**/*.csproj'
+      nobuild: true
+  
