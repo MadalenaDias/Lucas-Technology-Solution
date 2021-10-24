@@ -6,38 +6,12 @@
 trigger:
 - fet/5751
 
-jobs:
-- job: Linux
-  pool:
-    vmImage: 'ubuntu-18.04'
-  steps:
-  - task: UseDotNet@2
-    displayName: 'Use .NET Core sdk'
-    inputs:
-      packageType: 'sdk'
-      version: '5.0.100'
+pool:
+  vmImage: ubuntu-latest
 
-  - script: dotnet build ./frontend/LTS-Triple/LTS.sln
+variables:
+  buildConfiguration: 'Release'
 
-
-    displayName: 'dotnet build'
-  - task: DotNetCoreCLI@2
-    displayName: 'run tests'
-    inputs:
-      command: test
-      arguments:  '--logger trx /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura /p:Exclude=[xunit.*]*%2c[System.*]*'
-      projects: 'frontend/LTS-Triple/tests/**/*.csproj'
-      nobuild: true
-  - task: DotNetCoreCLI@2
-    inputs:
-      command: custom
-      custom: tool
-      arguments: install --tool-path . dotnet-reportgenerator-globaltool
-    displayName: Install ReportGenerator tool
-  - script: ./reportgenerator "-reports:$(Build.SourcesDirectory)/frontend/LTS-Triple/tests/**/coverage.cobertura.xml" "-targetdir:$(Build.SourcesDirectory)/coverlet/reports" "-reporttypes:HtmlInline_AzurePipelines;Cobertura"
-    displayName: Create reports
-  - task: PublishCodeCoverageResults@1
-    displayName: 'Publish code coverage'
-    inputs:
-      codeCoverageTool: Cobertura
-      summaryFileLocation: $(Build.SourcesDirectory)/coverlet/reports/Cobertura.xml  
+steps:
+- script: dotnet build ./frontend/LTS-Triple/LTS.sln
+  displayName: 'dotnet build $(buildConfiguration)'
