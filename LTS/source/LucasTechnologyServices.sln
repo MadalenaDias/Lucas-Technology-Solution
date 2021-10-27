@@ -39,7 +39,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LucasTechnologyServices.Mod
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LucasTechnologyServices.Module.Financial.Tests", "..\test\LucasTechnologyServices.Module.Financial.Tests\LucasTechnologyServices.Module.Financial.Tests.csproj", "{FCDBB96E-3B78-4CAC-9951-EEF1D308AD7D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LucasTechnologyServices.Module.Commercial", "Modules\LucasTechnologyServices.Module.Commercial\LucasTechnologyServices.Module.Commercial.csproj", "{D808CE93-D672-4F0A-91FE-D309602AAD03}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LucasTechnologyServices.Module.Commercial", "Modules\LucasTechnologyServices.Module.Commercial\LucasTechnologyServices.Module.Commercial.csproj", "{D808CE93-D672-4F0A-91FE-D309602AAD03}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LucasTechnologyServices.Module.Commercial.Tests", "..\test\LucasTechnologyServices.Module.Commercial.Tests\LucasTechnologyServices.Module.Commercial.Tests.csproj", "{7634F90B-964A-45CF-BB38-9042F9808B18}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -219,6 +221,18 @@ Global
 		{D808CE93-D672-4F0A-91FE-D309602AAD03}.Release|x64.Build.0 = Release|Any CPU
 		{D808CE93-D672-4F0A-91FE-D309602AAD03}.Release|x86.ActiveCfg = Release|Any CPU
 		{D808CE93-D672-4F0A-91FE-D309602AAD03}.Release|x86.Build.0 = Release|Any CPU
+		{7634F90B-964A-45CF-BB38-9042F9808B18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7634F90B-964A-45CF-BB38-9042F9808B18}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7634F90B-964A-45CF-BB38-9042F9808B18}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{7634F90B-964A-45CF-BB38-9042F9808B18}.Debug|x64.Build.0 = Debug|Any CPU
+		{7634F90B-964A-45CF-BB38-9042F9808B18}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{7634F90B-964A-45CF-BB38-9042F9808B18}.Debug|x86.Build.0 = Debug|Any CPU
+		{7634F90B-964A-45CF-BB38-9042F9808B18}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7634F90B-964A-45CF-BB38-9042F9808B18}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7634F90B-964A-45CF-BB38-9042F9808B18}.Release|x64.ActiveCfg = Release|Any CPU
+		{7634F90B-964A-45CF-BB38-9042F9808B18}.Release|x64.Build.0 = Release|Any CPU
+		{7634F90B-964A-45CF-BB38-9042F9808B18}.Release|x86.ActiveCfg = Release|Any CPU
+		{7634F90B-964A-45CF-BB38-9042F9808B18}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -239,6 +253,7 @@ Global
 		{FAEDEE46-6A72-4DC5-9670-43A47FAB81CD} = {B7FC69B5-4967-4B87-A9F1-13CC826EE424}
 		{FCDBB96E-3B78-4CAC-9951-EEF1D308AD7D} = {D9812ECB-4630-450F-9951-9B67398B0750}
 		{D808CE93-D672-4F0A-91FE-D309602AAD03} = {B7FC69B5-4967-4B87-A9F1-13CC826EE424}
+		{7634F90B-964A-45CF-BB38-9042F9808B18} = {D9812ECB-4630-450F-9951-9B67398B0750}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6619A715-0457-42A9-9F0A-719053D83172}
