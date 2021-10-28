@@ -23,6 +23,10 @@ namespace LucasTechnologyServices.Module.Core.Models
         [StringLength(450)]
         public string FullName { get; set; }
 
+        [Required(ErrorMessage = "The {0} field is required.")]
+        [StringLength(50)]
+        public string UserName { get; set; }
+
         public long? VendorId { get; set; }
 
         public bool IsDeleted { get; set; }
@@ -40,7 +44,7 @@ namespace LucasTechnologyServices.Module.Core.Models
 
         public IList<UserRole> Roles { get; set; } = new List<UserRole>();
 
-        
+
         [StringLength(450)]
         public string Culture { get; set; }
 
