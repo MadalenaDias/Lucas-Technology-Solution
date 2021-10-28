@@ -21,6 +21,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\source\Modules\LucasTechnologyServices.Module.Tax\LucasTechnologyServices.Module.Tax.csproj" />
     <ProjectReference Include="LucasTechnologyServices.Module.Tax.Tests.csproj" />
   </ItemGroup>
 

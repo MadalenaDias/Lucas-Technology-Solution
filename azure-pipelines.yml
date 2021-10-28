@@ -16,14 +16,14 @@ jobs:
     inputs:
       packageType: 'sdk'
       version: '5.0.100'
-  - script: dotnet build ./LTS/source/LucasTechnologyServices.sln
+  - script: dotnet build ./LucasTechnologyServices.sln
     displayName: 'dotnet build'
   - task: DotNetCoreCLI@2
     displayName: 'run tests'
     inputs:
       command: test
       arguments:  '--logger trx /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura /p:Exclude=[xunit.*]*%2c[System.*]*'
-      projects: 'LTS/test/**/*.csproj'
+      projects: 'test/**/*.csproj'
       nobuild: true
   - task: DotNetCoreCLI@2
     inputs:
@@ -31,7 +31,7 @@ jobs:
       custom: tool
       arguments: install --tool-path . dotnet-reportgenerator-globaltool
       displayName: Install ReportGenerator tool
-  - script: ./reportgenerator "-reports:$(Build.SourcesDirectory)/LTS/test/**/coverage.cobertura.xml" "-targetdir:$(Build.SourcesDirectory)/coverlet/reports" "-reporttypes:HtmlInline_AzurePipelines;Cobertura"
+  - script: ./reportgenerator "-reports:$(Build.SourcesDirectory)/test/**/coverage.cobertura.xml" "-targetdir:$(Build.SourcesDirectory)/coverlet/reports" "-reporttypes:HtmlInline_AzurePipelines;Cobertura"
     displayName: Create reports
   - task: PublishCodeCoverageResults@1
     displayName: 'Publish code coverage'
@@ -54,16 +54,16 @@ jobs:
     displayName: 'Restoring code using dotnet restore'
     inputs: 
       command: 'restore'
-      projects: 'LTS/**/*/*.csproj'
+      projects: '**/*/*.csproj'
       includeNuGetOrg: true
-  - script: dotnet build ./LTS/source/LucasTechnologyServices.sln
+  - script: dotnet build ./LucasTechnologyServices.sln
     displayName: 'dotnet build'
   - task: DotNetCoreCLI@2
     displayName: 'run tests'
     inputs:
       command: test
       arguments:  '--logger trx /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura /p:Exclude=[xunit.*]*%2c[System.*]*'
-      projects: 'LTS/test/**/*.csproj'
+      projects: 'test/**/*.csproj'
       nobuild: true
   - task: DotNetCoreCLI@2
     inputs:
@@ -71,7 +71,7 @@ jobs:
       custom: tool
       arguments: install --tool-path . dotnet-reportgenerator-globaltool
       displayName: Install ReportGenerator tool
-  - script: .\reportgenerator -reports:$(Build.SourcesDirectory)/LTS/test/**/coverage.cobertura.xml -targetdir:$(Build.SourcesDirectory)\coverlet\reports -reporttypes:"HtmlInline_AzurePipelines;Cobertura"
+  - script: .\reportgenerator -reports:$(Build.SourcesDirectory)/test/**/coverage.cobertura.xml -targetdir:$(Build.SourcesDirectory)\coverlet\reports -reporttypes:"HtmlInline_AzurePipelines;Cobertura"
     displayName: Create reports 
   - task: PublishCodeCoverageResults@1
     displayName: 'Publish code coverage'
@@ -90,7 +90,7 @@ jobs:
     inputs:
       packageType: 'sdk'
       version: '5.0.100'
-  - script: dotnet build ./LTS/source/LucasTechnologyServices.sln
+  - script: dotnet build ./LucasTechnologyServices.sln
     displayName: 'dotnet build'
   
   - task: DotNetCoreCLI@2
@@ -98,7 +98,7 @@ jobs:
     inputs:
       command: test
       arguments:  '--configuration $(buildConfiguration) --logger trx /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura /p:Exclude=[xunit.*]*%2c[System.*]*'
-      projects: 'LTS/test/**/*.csproj'
+      projects: 'test/**/*.csproj'
       nobuild: true
   - task: DotNetCoreCLI@2
     inputs:
@@ -106,7 +106,7 @@ jobs:
       custom: tool
       arguments: install --tool-path . dotnet-reportgenerator-globaltool
       displayName: Install ReportGenerator tool
-  - script: ./reportgenerator -reports:$(Build.SourcesDirectory)/LTS/test/**/coverage.cobertura.xml -targetdir:$(Build.SourcesDirectory)/coverlet/reports -reporttypes:"HtmlInline_AzurePipelines;Cobertura"
+  - script: ./reportgenerator -reports:$(Build.SourcesDirectory)/test/**/coverage.cobertura.xml -targetdir:$(Build.SourcesDirectory)/coverlet/reports -reporttypes:"HtmlInline_AzurePipelines;Cobertura"
     displayName: Create reports   
   - task: PublishCodeCoverageResults@1
     displayName: 'Publish code coverage'
