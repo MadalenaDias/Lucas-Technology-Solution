@@ -4,9 +4,9 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/dotnet-core
 
 trigger:
-  - mig/200
+  - development
   
-  jobs:
+jobs:
   - job: Linux
     pool:
       vmImage: 'ubuntu-18.04'
@@ -15,7 +15,7 @@ trigger:
       displayName: 'Use .NET Core sdk'
       inputs:
         packageType: 'sdk'
-        version: '5.0.100'
+        version: '5.0.402'
     - script: dotnet build ./LucasTechnologyServices.sln
       displayName: 'dotnet build'
     - task: DotNetCoreCLI@2
@@ -30,7 +30,7 @@ trigger:
         command: custom
         custom: tool
         arguments: install --tool-path . dotnet-reportgenerator-globaltool
-        displayName: Install ReportGenerator tool
+      displayName: Install ReportGenerator tool
     - script: ./reportgenerator "-reports:$(Build.SourcesDirectory)/testing/**/coverage.cobertura.xml" "-targetdir:$(Build.SourcesDirectory)/coverlet/reports" "-reporttypes:HtmlInline_AzurePipelines;Cobertura"
       displayName: Create reports
     - task: PublishCodeCoverageResults@1
@@ -39,7 +39,37 @@ trigger:
         codeCoverageTool: Cobertura
         summaryFileLocation: $(Build.SourcesDirectory)/coverlet/reports/Cobertura.xml  
   
-  
+  - job: macOS
+    pool:
+      vmImage: 'macOS-10.15'
+    steps:
+    - task: UseDotNet@2
+      displayName: 'Use .NET Core sdk'
+      inputs:
+        packageType: 'sdk'
+        version: '5.0.402'
+    - script: dotnet build ./LucasTechnologyServices.sln
+      displayName: 'dotnet build'
+    - task: DotNetCoreCLI@2
+      displayName: 'run tests'
+      inputs:
+        command: test
+        arguments:  '--logger trx /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura /p:Exclude=[xunit.*]*%2c[System.*]*'
+        projects: 'testing/**/*.csproj'
+        nobuild: true
+    - task: DotNetCoreCLI@2
+      inputs:
+        command: custom
+        custom: tool
+        arguments: install --tool-path . dotnet-reportgenerator-globaltool
+      displayName: Install ReportGenerator tool
+    - script: ./reportgenerator -reports:$(Build.SourcesDirectory)/testing/**/coverage.cobertura.xml -targetdir:$(Build.SourcesDirectory)/coverlet/reports -reporttypes:"HtmlInline_AzurePipelines;Cobertura"
+      displayName: Create reports
+    - task: PublishCodeCoverageResults@1
+      displayName: 'Publish code coverage'
+      inputs:
+        codeCoverageTool: Cobertura
+        summaryFileLocation: $(Build.SourcesDirectory)/coverlet/reports/Cobertura.xml  
   
   - job: Windows
     pool:
@@ -49,14 +79,14 @@ trigger:
       displayName: 'Use .NET Core sdk'
       inputs:
         packageType: 'sdk'
-        version: '5.0.100'
+        version: '5.0.402'
     - task: DotNetCoreCLI@2
       displayName: 'Restoring code using dotnet restore'
       inputs: 
         command: 'restore'
         projects: '**/*/*.csproj'
         includeNuGetOrg: true
-    - script: dotnet build ./LucasTechnologyServices.sln
+    - script: dotnet build ./SimplCommerce.sln
       displayName: 'dotnet build'
     - task: DotNetCoreCLI@2
       displayName: 'run tests'
@@ -70,8 +100,8 @@ trigger:
         command: custom
         custom: tool
         arguments: install --tool-path . dotnet-reportgenerator-globaltool
-        displayName: Install ReportGenerator tool
-    - script: .\reportgenerator -reports:$(Build.SourcesDirectory)/testing/**/coverage.cobertura.xml -targetdir:$(Build.SourcesDirectory)\coverlet\reports -reporttypes:"HtmlInline_AzurePipelines;Cobertura"
+      displayName: Install ReportGenerator tool
+    - script: .\reportgenerator -reports:$(Build.SourcesDirectory)\testing\**\coverage.cobertura.xml -targetdir:$(Build.SourcesDirectory)\coverlet\reports -reporttypes:"HtmlInline_AzurePipelines;Cobertura"
       displayName: Create reports 
     - task: PublishCodeCoverageResults@1
       displayName: 'Publish code coverage'
@@ -89,23 +119,22 @@ trigger:
       displayName: 'Use .NET Core sdk'
       inputs:
         packageType: 'sdk'
-        version: '5.0.100'
-    - script: dotnet build ./LucasTechnologyServices.sln
-      displayName: 'dotnet build'
-    
+        version: '5.0.402'
+    - script: dotnet build --configuration $(buildConfiguration)
+      displayName: 'dotnet build $(buildConfiguration)'
     - task: DotNetCoreCLI@2
       displayName: 'run tests'
       inputs:
         command: test
         arguments:  '--configuration $(buildConfiguration) --logger trx /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura /p:Exclude=[xunit.*]*%2c[System.*]*'
-        projects: 'test/**/*.csproj'
+        projects: 'testing/**/*.csproj'
         nobuild: true
     - task: DotNetCoreCLI@2
       inputs:
         command: custom
         custom: tool
         arguments: install --tool-path . dotnet-reportgenerator-globaltool
-        displayName: Install ReportGenerator tool
+      displayName: Install ReportGenerator tool
     - script: ./reportgenerator -reports:$(Build.SourcesDirectory)/testing/**/coverage.cobertura.xml -targetdir:$(Build.SourcesDirectory)/coverlet/reports -reporttypes:"HtmlInline_AzurePipelines;Cobertura"
       displayName: Create reports   
     - task: PublishCodeCoverageResults@1
