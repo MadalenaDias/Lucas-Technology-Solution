@@ -31,11 +31,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LucasTechnologyServices.Mod
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LucasTechnologyServices.Module.Audit.Tests", "test\LucasTechnologyServices.Module.Audit.Tests\LucasTechnologyServices.Module.Audit.Tests.csproj", "{F0E04072-7AB1-4458-9C8A-D89C0842C9F9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LucasTechnologyServices.WebAPI.Core", "source\WebAPIs\LucasTechnologyServices.WebAPI.Core\LucasTechnologyServices.WebAPI.Core.csproj", "{B0F13793-A90A-4161-B485-7106E7EFCAFF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LucasTechnologyServices.WebAPI.Core", "source\WebAPIs\LucasTechnologyServices.WebAPI.Core\LucasTechnologyServices.WebAPI.Core.csproj", "{B0F13793-A90A-4161-B485-7106E7EFCAFF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LucasTechnologyServices.AppService.Core", "source\Application\Core\LucasTechnologyServices.AppService.Core\LucasTechnologyServices.AppService.Core.csproj", "{AA0D697D-5138-4897-9079-26F62253A743}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LucasTechnologyServices.AppService.Core", "source\Application\Core\LucasTechnologyServices.AppService.Core\LucasTechnologyServices.AppService.Core.csproj", "{AA0D697D-5138-4897-9079-26F62253A743}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LucasTechnologyService.AppService.Core.Tests", "test\LucasTechnologyService.AppService.Core.Tests\LucasTechnologyService.AppService.Core.Tests.csproj", "{352E94E0-EEA2-4E4B-8C0B-6F99C2C515F1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LucasTechnologyService.AppService.Core.Tests", "test\LucasTechnologyService.AppService.Core.Tests\LucasTechnologyService.AppService.Core.Tests.csproj", "{352E94E0-EEA2-4E4B-8C0B-6F99C2C515F1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FrontEnd", "FrontEnd", "{B6662234-B582-4E7E-929A-5C6D5F00B495}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Erp", "Erp", "{998758B5-AD65-4150-B03A-2AE16752CA4E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LucasTechnologyServices.ErpBlazor", "source\frontend\LucasTechnologyServices.ErpBlazor\LucasTechnologyServices.ErpBlazor.csproj", "{ABA517ED-105C-459D-8D7A-7C0115C76315}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -103,6 +109,10 @@ Global
 		{352E94E0-EEA2-4E4B-8C0B-6F99C2C515F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{352E94E0-EEA2-4E4B-8C0B-6F99C2C515F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{352E94E0-EEA2-4E4B-8C0B-6F99C2C515F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABA517ED-105C-459D-8D7A-7C0115C76315}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABA517ED-105C-459D-8D7A-7C0115C76315}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABA517ED-105C-459D-8D7A-7C0115C76315}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABA517ED-105C-459D-8D7A-7C0115C76315}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -114,6 +124,8 @@ Global
 		{3C8E66BE-2A73-4912-87B3-D45547BDCC6E} = {0D3D0C09-0601-4411-B21E-F9F56B6FA114}
 		{F767D33F-66A9-4F87-B5A2-6BD90AC245C7} = {0D3D0C09-0601-4411-B21E-F9F56B6FA114}
 		{121F43AB-5334-4D87-BA3C-81B1723977FB} = {0D3D0C09-0601-4411-B21E-F9F56B6FA114}
+		{998758B5-AD65-4150-B03A-2AE16752CA4E} = {B6662234-B582-4E7E-929A-5C6D5F00B495}
+		{ABA517ED-105C-459D-8D7A-7C0115C76315} = {998758B5-AD65-4150-B03A-2AE16752CA4E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EA22F55B-75F7-4F66-A72B-44F2FB4A9271}
