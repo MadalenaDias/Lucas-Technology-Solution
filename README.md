@@ -5,7 +5,7 @@
 
 ## This application is builded using NET 5.
 
-## Data migrations?
+## Data migrations:
 
 ### dotnet ef migrations add Initializer -G 'Project_Name'
 ### dotnet ef database update
