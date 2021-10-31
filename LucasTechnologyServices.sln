@@ -17,19 +17,25 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LucasTechnologyServices.Mod
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LucasTechnologyServices.Module.HR", "source\Modules\LucasTechnologyServices.Module.HR\LucasTechnologyServices.Module.HR.csproj", "{F767D33F-66A9-4F87-B5A2-6BD90AC245C7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LucasTechnologyServices.Infrastructure.Tests", "test\LucasTechnologyServices.Infrastructure.Tests\LucasTechnologyServices.Infrastructure.Tests.csproj", "{B6445CBD-2FC8-433F-AAED-1D62EE56474E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LucasTechnologyServices.Infrastructure.Tests", "test\LucasTechnologyServices.Infrastructure.Tests\LucasTechnologyServices.Infrastructure.Tests.csproj", "{B6445CBD-2FC8-433F-AAED-1D62EE56474E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LucasTechnologyServices.Module.Core.Tests", "test\LucasTechnologyServices.Module.Core.Tests\LucasTechnologyServices.Module.Core.Tests.csproj", "{C7D7B412-E210-43FA-A2E7-8F30287FB37E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LucasTechnologyServices.Module.Core.Tests", "test\LucasTechnologyServices.Module.Core.Tests\LucasTechnologyServices.Module.Core.Tests.csproj", "{C7D7B412-E210-43FA-A2E7-8F30287FB37E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LucasTechnologyServices.Module.Crm.Tests", "test\LucasTechnologyServices.Module.Crm.Tests\LucasTechnologyServices.Module.Crm.Tests.csproj", "{77B1571B-16E9-431E-B7E5-BADC887D2581}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LucasTechnologyServices.Module.Crm.Tests", "test\LucasTechnologyServices.Module.Crm.Tests\LucasTechnologyServices.Module.Crm.Tests.csproj", "{77B1571B-16E9-431E-B7E5-BADC887D2581}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LucasTechnologyServices.Module.Erp.Tests", "test\LucasTechnologyServices.Module.Erp.Tests\LucasTechnologyServices.Module.Erp.Tests.csproj", "{FA6C9C8E-B276-4363-99FD-F379013785AC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LucasTechnologyServices.Module.Erp.Tests", "test\LucasTechnologyServices.Module.Erp.Tests\LucasTechnologyServices.Module.Erp.Tests.csproj", "{FA6C9C8E-B276-4363-99FD-F379013785AC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LucasTechnologyServices.Module.HR.Tests", "test\LucasTechnologyServices.Module.HR.Tests\LucasTechnologyServices.Module.HR.Tests.csproj", "{0029BFA2-D4AB-4425-84E0-D3ED63387F5A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LucasTechnologyServices.Module.HR.Tests", "test\LucasTechnologyServices.Module.HR.Tests\LucasTechnologyServices.Module.HR.Tests.csproj", "{0029BFA2-D4AB-4425-84E0-D3ED63387F5A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LucasTechnologyServices.Module.Audit", "source\Modules\LucasTechnologyServices.Module.Audit\LucasTechnologyServices.Module.Audit.csproj", "{121F43AB-5334-4D87-BA3C-81B1723977FB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LucasTechnologyServices.Module.Audit", "source\Modules\LucasTechnologyServices.Module.Audit\LucasTechnologyServices.Module.Audit.csproj", "{121F43AB-5334-4D87-BA3C-81B1723977FB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LucasTechnologyServices.Module.Audit.Tests", "test\LucasTechnologyServices.Module.Audit.Tests\LucasTechnologyServices.Module.Audit.Tests.csproj", "{F0E04072-7AB1-4458-9C8A-D89C0842C9F9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LucasTechnologyServices.Module.Audit.Tests", "test\LucasTechnologyServices.Module.Audit.Tests\LucasTechnologyServices.Module.Audit.Tests.csproj", "{F0E04072-7AB1-4458-9C8A-D89C0842C9F9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LucasTechnologyServices.WebAPI.Core", "source\WebAPIs\LucasTechnologyServices.WebAPI.Core\LucasTechnologyServices.WebAPI.Core.csproj", "{B0F13793-A90A-4161-B485-7106E7EFCAFF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LucasTechnologyServices.AppService.Core", "source\Application\Core\LucasTechnologyServices.AppService.Core\LucasTechnologyServices.AppService.Core.csproj", "{AA0D697D-5138-4897-9079-26F62253A743}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LucasTechnologyService.AppService.Core.Tests", "test\LucasTechnologyService.AppService.Core.Tests\LucasTechnologyService.AppService.Core.Tests.csproj", "{352E94E0-EEA2-4E4B-8C0B-6F99C2C515F1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -85,6 +91,18 @@ Global
 		{F0E04072-7AB1-4458-9C8A-D89C0842C9F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F0E04072-7AB1-4458-9C8A-D89C0842C9F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F0E04072-7AB1-4458-9C8A-D89C0842C9F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0F13793-A90A-4161-B485-7106E7EFCAFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0F13793-A90A-4161-B485-7106E7EFCAFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0F13793-A90A-4161-B485-7106E7EFCAFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0F13793-A90A-4161-B485-7106E7EFCAFF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA0D697D-5138-4897-9079-26F62253A743}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA0D697D-5138-4897-9079-26F62253A743}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA0D697D-5138-4897-9079-26F62253A743}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA0D697D-5138-4897-9079-26F62253A743}.Release|Any CPU.Build.0 = Release|Any CPU
+		{352E94E0-EEA2-4E4B-8C0B-6F99C2C515F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{352E94E0-EEA2-4E4B-8C0B-6F99C2C515F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{352E94E0-EEA2-4E4B-8C0B-6F99C2C515F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{352E94E0-EEA2-4E4B-8C0B-6F99C2C515F1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
