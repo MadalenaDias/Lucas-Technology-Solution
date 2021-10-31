@@ -4,7 +4,7 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/dotnet-core
 
 trigger:
-  - development-test
+  - fet/2601
   
 jobs:
   - job: Linux
@@ -23,7 +23,7 @@ jobs:
       inputs:
         command: test
         arguments:  '--logger trx /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura /p:Exclude=[xunit.*]*%2c[System.*]*'
-        projects: 'testing/**/*.csproj'
+        projects: 'test/**/*.csproj'
         nobuild: true
     - task: DotNetCoreCLI@2
       inputs:
