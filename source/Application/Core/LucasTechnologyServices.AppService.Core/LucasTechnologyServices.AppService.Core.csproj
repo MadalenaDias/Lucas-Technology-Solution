@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\..\Infrastructure\LucasTechnologyService.Infrastructure\LucasTechnologyService.Infrastructure.csproj" />
     <ProjectReference Include="..\..\..\WebAPIs\LucasTechnologyServices.WebAPI.Core\LucasTechnologyServices.WebAPI.Core.csproj" />
   </ItemGroup>
 
