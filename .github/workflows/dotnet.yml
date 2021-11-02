@@ -21,6 +21,6 @@ jobs:
     - name: Build
       run: dotnet build -c Release --no-restore
     - name: Test
-      run: dotnet test 'test/**/*.csproj'
+      run: dotnet test 
    
       
