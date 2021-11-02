@@ -2,7 +2,7 @@ name: Lucas Technology Services Solution CI/CD
 
 on:
   push:
-    branches: [ dev ]
+    branches: [ master ]
   
 
 jobs:
@@ -22,5 +22,3 @@ jobs:
       run: dotnet build -c Release --no-restore
     - name: Test
       run: dotnet test 
-   
-      
