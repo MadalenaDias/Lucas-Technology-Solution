@@ -20,4 +20,8 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\source\Infrastructure\LucasTechnologyService.Infrastructure\LucasTechnologyService.Infrastructure.csproj" />
+  </ItemGroup>
+
 </Project>
