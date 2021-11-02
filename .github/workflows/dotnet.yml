@@ -3,8 +3,7 @@ name: .NET
 on:
   push:
     branches: [ dev ]
-  pull_request:
-    branches: [ dev ]
+  
 
 jobs:
   build:
@@ -20,7 +19,7 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore
     - name: Build
-      run: dotnet build ./LucasTechnologyServices.sln
+      run: dotnet build -c Release --no-restore
     - name: Test
       run: dotnet test '--logger trx /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura /p:Exclude=[xunit.*]*%2c[System.*]*'
    
