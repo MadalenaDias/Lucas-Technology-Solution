@@ -20,8 +20,4 @@
     </PackageReference>
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\..\source\Modules\LucasTechnologyServices.Module.ServiceDesk\LucasTechnologyServices.Module.ServiceDesk.csproj" />
-  </ItemGroup>
-
 </Project>
