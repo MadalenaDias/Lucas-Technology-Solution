@@ -41,7 +41,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FrontEnd", "FrontEnd", "{B6
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Erp", "Erp", "{998758B5-AD65-4150-B03A-2AE16752CA4E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LucasTechnologyServices.ErpBlazor", "source\frontend\LucasTechnologyServices.ErpBlazor\LucasTechnologyServices.ErpBlazor.csproj", "{ABA517ED-105C-459D-8D7A-7C0115C76315}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LucasTechnologyServices.ErpBlazor", "source\frontend\LucasTechnologyServices.ErpBlazor\LucasTechnologyServices.ErpBlazor.csproj", "{ABA517ED-105C-459D-8D7A-7C0115C76315}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LucasTechnologyServices.Module.ServiceDesk", "source\Modules\LucasTechnologyServices.Module.ServiceDesk\LucasTechnologyServices.Module.ServiceDesk.csproj", "{537E11EF-7A75-4FF6-B611-771A845C8DDA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LucasTechnologyServices.Module.ServiceDesk.Tests", "test\LucasTechnologyServices.Module.ServiceDesk.Tests\LucasTechnologyServices.Module.ServiceDesk.Tests.csproj", "{84039F77-4433-44F6-8C78-32F6944058BC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -113,6 +117,14 @@ Global
 		{ABA517ED-105C-459D-8D7A-7C0115C76315}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ABA517ED-105C-459D-8D7A-7C0115C76315}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ABA517ED-105C-459D-8D7A-7C0115C76315}.Release|Any CPU.Build.0 = Release|Any CPU
+		{537E11EF-7A75-4FF6-B611-771A845C8DDA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{537E11EF-7A75-4FF6-B611-771A845C8DDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{537E11EF-7A75-4FF6-B611-771A845C8DDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{537E11EF-7A75-4FF6-B611-771A845C8DDA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84039F77-4433-44F6-8C78-32F6944058BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84039F77-4433-44F6-8C78-32F6944058BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84039F77-4433-44F6-8C78-32F6944058BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84039F77-4433-44F6-8C78-32F6944058BC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -126,6 +138,7 @@ Global
 		{121F43AB-5334-4D87-BA3C-81B1723977FB} = {0D3D0C09-0601-4411-B21E-F9F56B6FA114}
 		{998758B5-AD65-4150-B03A-2AE16752CA4E} = {B6662234-B582-4E7E-929A-5C6D5F00B495}
 		{ABA517ED-105C-459D-8D7A-7C0115C76315} = {998758B5-AD65-4150-B03A-2AE16752CA4E}
+		{537E11EF-7A75-4FF6-B611-771A845C8DDA} = {0D3D0C09-0601-4411-B21E-F9F56B6FA114}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EA22F55B-75F7-4F66-A72B-44F2FB4A9271}
