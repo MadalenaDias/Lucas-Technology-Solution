@@ -4,5 +4,8 @@ namespace LucasTechnologyServices.Module.Erp
 {
     public class Class1
     {
+
+
+        //testing
     }
 }

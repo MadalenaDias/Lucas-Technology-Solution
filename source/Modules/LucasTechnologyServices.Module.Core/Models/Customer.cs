@@ -17,10 +17,10 @@ namespace LucasTechnologyServices.Module.Core.Models
             _addresses = new List<Address>();
         }
 
-        public string Name { get; private set; }
-        public Document Document { get; private set; }
-        public Email Email { get; private set; }
-        public string Phone { get; private set; }
+        public string Name { get; set; }
+        public Document Document { get; set; }
+        public Email Email { get; set; }
+        public string Phone { get; set; }
         public IReadOnlyCollection<Address> Addresses => _addresses.ToArray();
 
         public void AddAddress(Address address)
