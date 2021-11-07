@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "lts-erp-administrative",
+	"webDir": "build",
+	"bundledWebRuntime": false
+}

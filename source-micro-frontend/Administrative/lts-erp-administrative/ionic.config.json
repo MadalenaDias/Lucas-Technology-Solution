@@ -1,0 +1,7 @@
+{
+  "name": "lts-erp-administrative",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
