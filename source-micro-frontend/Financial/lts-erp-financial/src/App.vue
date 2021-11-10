@@ -56,14 +56,14 @@ export default defineComponent({
     const selectedIndex = ref(0);
     const appPages = [
       {
-        title: 'Inbox',
-        url: '/folder/Inbox',
+        title: 'Home',
+        url: '/homepage/Home',
         iosIcon: mailOutline,
         mdIcon: mailSharp
       },
       {
-        title: 'Outbox',
-        url: '/folder/Outbox',
+        title: 'Banks',
+        url: '/banks',
         iosIcon: paperPlaneOutline,
         mdIcon: paperPlaneSharp
       },
