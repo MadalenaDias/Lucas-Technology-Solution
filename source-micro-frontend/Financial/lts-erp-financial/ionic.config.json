@@ -1,7 +1,0 @@
-{
-  "name": "lts-erp-financial",
-  "integrations": {
-    "capacitor": {}
-  },
-  "type": "vue"
-}
