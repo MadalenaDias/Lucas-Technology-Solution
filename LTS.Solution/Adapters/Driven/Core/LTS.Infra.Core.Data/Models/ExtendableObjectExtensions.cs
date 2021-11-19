@@ -1,8 +1,4 @@
-<<<<<<< HEAD:LTS.Solution/Adapters/Driven/Core/LTS.Infra.Core.Data/Models/ExtendableObjectExtensions.cs
 ﻿using LTS.Infra.Core.Data.Helpers;
-=======
-﻿using LucasTechnologyService.Infrastructure.Helpers;
->>>>>>> origin/dev:source/Infrastructure/LucasTechnologyService.Infrastructure/Models/ExtendableObjectExtensions.cs
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
@@ -11,11 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-<<<<<<< HEAD:LTS.Solution/Adapters/Driven/Core/LTS.Infra.Core.Data/Models/ExtendableObjectExtensions.cs
 namespace LTS.Infra.Core.Data.Models
-=======
-namespace LucasTechnologyService.Infrastructure.Models
->>>>>>> origin/dev:source/Infrastructure/LucasTechnologyService.Infrastructure/Models/ExtendableObjectExtensions.cs
 {
     public static class ExtendableObjectExtensions
     {

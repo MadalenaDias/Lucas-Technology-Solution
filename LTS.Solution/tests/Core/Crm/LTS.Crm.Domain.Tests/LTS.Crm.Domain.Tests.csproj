@@ -19,11 +19,8 @@
     </PackageReference>
   </ItemGroup>
 
-<<<<<<< HEAD:LTS.Solution/tests/Core/Crm/LTS.Crm.Domain.Tests/LTS.Crm.Domain.Tests.csproj
   <ItemGroup>
     <ProjectReference Include="..\..\..\..\Core\Crm\LTS.Crm.Domain\LTS.Crm.Domain.csproj" />
   </ItemGroup>
 
-=======
->>>>>>> origin/dev:test/LucasTechnologyServices.Module.Audit.Tests/LucasTechnologyServices.Module.Audit.Tests.csproj
 </Project>

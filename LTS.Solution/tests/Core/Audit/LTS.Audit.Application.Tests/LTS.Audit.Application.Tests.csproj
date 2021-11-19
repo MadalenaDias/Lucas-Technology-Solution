@@ -20,11 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
-<<<<<<< HEAD:LTS.Solution/tests/Core/Audit/LTS.Audit.Application.Tests/LTS.Audit.Application.Tests.csproj
     <ProjectReference Include="..\..\..\..\Core\Audit\LTS.Audit.Application\LTS.Audit.Application.csproj" />
-=======
-    <ProjectReference Include="..\..\source\Application\Core\LucasTechnologyServices.AppService.Core\LucasTechnologyServices.AppService.Core.csproj" />
->>>>>>> origin/dev:test/LucasTechnologyService.AppService.Core.Tests/LucasTechnologyService.AppService.Core.Tests.csproj
   </ItemGroup>
 
 </Project>

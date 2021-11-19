@@ -7,11 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-<<<<<<< HEAD:LTS.Solution/Adapters/Driving/Crm/LTS.Services.Crm.API/Program.cs
 namespace LTS.Services.Crm.API
-=======
-namespace LucasTechnologyServices.WebAPI.Core
->>>>>>> origin/dev:source/WebAPIs/LucasTechnologyServices.WebAPI.Core/Program.cs
 {
     public class Program
     {

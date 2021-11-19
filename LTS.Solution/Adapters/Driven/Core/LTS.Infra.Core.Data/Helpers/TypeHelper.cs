@@ -5,11 +5,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
-<<<<<<< HEAD:LTS.Solution/Adapters/Driven/Core/LTS.Infra.Core.Data/Helpers/TypeHelper.cs
 namespace LTS.Infra.Core.Data.Helpers
-=======
-namespace LucasTechnologyService.Infrastructure.Helpers
->>>>>>> origin/dev:source/Infrastructure/LucasTechnologyService.Infrastructure/Helpers/TypeHelper.cs
 {
     internal static class TypeHelper
     {
@@ -69,7 +65,5 @@ namespace LucasTechnologyService.Infrastructure.Helpers
                    type == typeof(TimeSpan) ||
                    type == typeof(Guid);
         }
-
-        
     }
 }

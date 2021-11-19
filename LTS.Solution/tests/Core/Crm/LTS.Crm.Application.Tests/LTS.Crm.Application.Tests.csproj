@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
@@ -8,7 +8,6 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.9.4" />
-    <PackageReference Include="ReportGenerator" Version="4.8.13" />
     <PackageReference Include="xunit" Version="2.4.1" />
     <PackageReference Include="xunit.runner.visualstudio" Version="2.4.3">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -21,11 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
-<<<<<<< HEAD:LTS.Solution/tests/Core/Crm/LTS.Crm.Application.Tests/LTS.Crm.Application.Tests.csproj
     <ProjectReference Include="..\..\..\..\Core\Crm\LTS.Crm.Application\LTS.Crm.Application.csproj" />
-=======
-    <ProjectReference Include="..\..\source\Modules\LucasTechnologyServices.Module.Core\LucasTechnologyServices.Module.Core.csproj" />
->>>>>>> origin/dev:test/LucasTechnologyServices.Module.Core.Tests/LucasTechnologyServices.Module.Core.Tests.csproj
   </ItemGroup>
 
 </Project>
