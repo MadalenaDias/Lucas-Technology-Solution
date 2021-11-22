@@ -4,4 +4,9 @@
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Adapters\Driven\LTS.Infrastructure\LTS.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\LTS.Core.Domain\LTS.Core.Domain.csproj" />
+  </ItemGroup>
+
 </Project>
