@@ -60,3 +60,51 @@ Then navigate to http://localhost:8000/swagger and play with de Swagger.
 
 You can play with the latest build of [Acerola](http://grape.westus2.cloudapp.azure.com:8000/swagger "Acerola").
 > This source code and website should be used only for learning purposes and **all data will be erased weekly**.
+
+
+#### Currently, there is a lot of talk about the creation of microservices, applications that perform a specific function. When creating a system based on this architecture, we will have several microservices executing specific functionalities of the system.
+
+#### Thus, situations can occur where it is necessary to obtain information from more than one microservice, or the system needs to be consumed by several clients. With mobile applications, web, third party applications, etc.
+
+In these scenarios, it can be costly to have to manage the access of each microservice in the system. Each one with its own peculiarities. This is where API Gateway comes in.
+
+## API Gateway
+
+#### The API Gateway works as a gateway to the system's microservices clients. Instead of calling the microservices directly, clients call the API Gateway, which redirects the request to the appropriate microservice. When the microservice returns the request, the API Gateway returns it to the client.
+
+* Microservices can be modified without worrying about the clients;
+* Microservices can communicate using any type of protocol. The important thing is for the gateway to implement a protocol that is understood by the clients;
+* The gateway can implement features that do not impact microservices, such as authentication, logging, SSL, load balancing, etc.
+
+## Ocelot
+
+#### Ocelot is a library that allows you to create an API Gateway with ASP.NET. Having a wide range of features, such as:
+* Request aggregation;
+* Routing;
+* Authentication;
+* Cache;
+* load balancing;
+* Logs;
+* WebSockets;
+* Service Fabric
+
+### Even though it is aimed at .NET applications that are implementing a microservices architecture, Ocelot can be used as an API Gateway for any type of system that implements this architecture.
+
+## Creating an API Gateway
+
+### As said, Ocelot allows you to configure an ASP.NET application to behave as an API Gateway. So, to create it initially it is necessary to create an ASP.NET application.
+
+### As the application will only work as an API Gateway, we can create an “empty”:
+
+$ dotnet new web -n Gateway
+
+...
+
+#### This is the best practice, but it is possible to define Ocelot in any type of ASP.NET application.
+
+#### After creating the application, it is necessary to add the Ocelot reference:
+
+$ dotnet add package Ocelot
+
+...
+
