@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace LTSSolution.Infrastructure.Models
 {
-    public abstract  class EntityBase : EntityBaseWithTypedId<long>
+    public interface IEntityWithTypedId<TId>
     {
+        TId Id { get;}
     }
 }

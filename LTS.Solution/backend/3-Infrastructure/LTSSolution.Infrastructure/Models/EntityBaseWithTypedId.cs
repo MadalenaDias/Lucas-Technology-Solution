@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace LTSSolution.Infrastructure.Models
 {
-    public abstract  class EntityBase : EntityBaseWithTypedId<long>
+    public abstract  class EntityBaseWithTypedId<TId> : ValidatableObject, IEntityWithTypedId<TId>
     {
+        public virtual TId Id { get; protected set; }
     }
 }
