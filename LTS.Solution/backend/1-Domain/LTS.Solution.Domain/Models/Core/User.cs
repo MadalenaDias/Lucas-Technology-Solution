@@ -1,5 +1,6 @@
 ﻿
 
+using LTS.Solution.Domain.ValueObjects;
 using LTSSolution.Infrastructure.Models;
 using Microsoft.AspNetCore.Identity;
 using System;
@@ -20,7 +21,7 @@ namespace LTS.Solution.Domain.Models.Core
         public Guid UserGuid { get; private set; }
 
         
-        public string FullName { get; private set; }
+        public Name Name { get; private set; }
 
         public long? VendorId { get; private set; }
 
