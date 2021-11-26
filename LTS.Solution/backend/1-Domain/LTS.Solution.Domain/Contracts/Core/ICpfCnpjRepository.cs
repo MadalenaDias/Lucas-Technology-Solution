@@ -4,14 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LTS.Solution.Domain.Models.Core
+namespace LTS.Solution.Domain.Contracts.Core
 {
-    public enum MediaType
+    internal interface ICpfCnpjRepository
     {
-        Image = 1,
-
-        File = 5,
-
-        Video = 10,
     }
 }
