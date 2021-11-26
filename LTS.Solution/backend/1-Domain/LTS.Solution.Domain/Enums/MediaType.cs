@@ -4,10 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LTS.Solution.Domain.Models.Core
+namespace LTS.Solution.Domain.Enums
 {
-    public class LTSConstants
+    public enum MediaType
     {
-        public const string ThemeConfigKey = "Theme";
+        Image = 1,
+
+        File = 5,
+
+        Video = 10,
     }
 }
