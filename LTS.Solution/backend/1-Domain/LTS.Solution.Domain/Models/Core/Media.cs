@@ -1,4 +1,5 @@
-﻿using LTSSolution.Infrastructure.Models;
+﻿using LTS.Solution.Domain.Enums;
+using LTSSolution.Infrastructure.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,7 +12,7 @@ namespace LTS.Solution.Domain.Models.Core
     {
         public Media(DateTimeOffset createdOn, DateTimeOffset uploadeddOn)
         {
-            CreatedOn = DateTime.Now;;
+            CreatedOn = DateTime.Now; ;
             UploadeddOn = DateTime.Now;
         }
 
@@ -21,10 +22,10 @@ namespace LTS.Solution.Domain.Models.Core
 
         public string FileName { get; private set; }
 
-        public MediaType MediaType { get; private set; }
+        public EMediaType MediaType { get; private set; }
 
-        public DateTimeOffset CreatedOn {get; private set; }
+        public DateTimeOffset CreatedOn { get; private set; }
 
-        public DateTimeOffset UploadeddOn {get; private set; } 
+        public DateTimeOffset UploadeddOn { get; private set; }
     }
 }

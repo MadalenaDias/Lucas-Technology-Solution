@@ -56,6 +56,5 @@ namespace LTS.Solution.Domain.Models.Core
 
         public long LatestUpdatedById { get; private set; }
 
-        
     }
 }

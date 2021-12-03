@@ -15,7 +15,7 @@ namespace LTS.Solution.Domain.ValueObjects
             Number = number;
             Type = type;
 
-            
+
         }
 
         public string Number { get; private set; }

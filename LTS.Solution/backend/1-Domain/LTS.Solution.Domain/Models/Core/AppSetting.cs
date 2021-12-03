@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace LTS.Solution.Domain.Models.Core
 {
-    public class AppSetting : EntityBaseWithTypedId<string>
+    public class AppSetting : EntityBase
     {
-        public AppSetting(string id)
+        public AppSetting(long id)
         {
             Id = id;
         }

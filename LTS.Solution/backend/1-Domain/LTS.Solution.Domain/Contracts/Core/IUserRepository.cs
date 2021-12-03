@@ -1,7 +1,9 @@
+﻿using LTS.Solution.Domain.Models.Core;
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
-using LTS.Solution.Domain.Models.Core;
 
 namespace LTS.Solution.Domain.Contracts.Core
 {
@@ -15,6 +17,5 @@ namespace LTS.Solution.Domain.Contracts.Core
         void Add(User user);
         void Update(User user);
         void Remove(User user);
-         
     }
 }
