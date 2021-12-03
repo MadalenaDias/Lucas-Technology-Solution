@@ -13,6 +13,8 @@ namespace LTS.Solution.Domain.Models.Core
 
         public User User { get; private set; }
 
+        
+        
         public override long RoleId { get; set; }
 
         public Role Role { get; private set; }

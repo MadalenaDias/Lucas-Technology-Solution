@@ -9,13 +9,12 @@ namespace LTS.Solution.Domain.Models.Core
 {
     public class CpfCnpj : EntityBase
     {
-        
         public CpfCnpj(string cpf, string cnpj)
         {
             Cpf = cpf;
             Cnpj = Cnpj;
         }
-        
+
         public static bool IsValid(string cpfCnpj)
         {
             return (IsCpf(cpfCnpj) || IsCnpj(cpfCnpj));
@@ -62,7 +61,6 @@ namespace LTS.Solution.Domain.Models.Core
 
             return cpf.EndsWith(digito);
         }
-
         private static bool IsCnpj(string cnpj)
         {
             int[] multiplicador1 = new int[12] { 5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2 };
@@ -104,6 +102,7 @@ namespace LTS.Solution.Domain.Models.Core
         public string Cpf { get; private set; }
 
         public string Cnpj { get; private set; }
+
 
     }
 }

@@ -10,18 +10,23 @@ namespace LTS.Solution.Domain.Models.Core
 {
     public class Vendor : EntityBase
     {
+        private IList<CpfCnpj> _cpfCnpj;
+
         public Vendor()
         {
             CreatedOn = DateTimeOffset.Now;
+            
         }
 
-        public string Name { get; set; }
+        public string Name { get; private set; }
 
         public string Slug { get; private set; }
 
         public string Description { get; private set; }
 
         public Email Email { get; private set; }
+
+        public IReadOnlyCollection<CpfCnpj> CpfCnpjs { get { return _cpfCnpj.ToArray(); } }
 
         public DateTimeOffset CreatedOn { get; private set; }
 

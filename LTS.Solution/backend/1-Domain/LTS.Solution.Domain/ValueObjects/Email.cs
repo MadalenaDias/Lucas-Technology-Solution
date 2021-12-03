@@ -12,7 +12,7 @@ namespace LTS.Solution.Domain.ValueObjects
         {
             Address = address;
 
-            
+
         }
 
         public string Address { get; private set; }

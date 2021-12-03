@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace LTS.Solution.Domain.Contracts.Core
 {
-    public interface ICountryRepository 
+    public interface ICountryRepository
     {
         Task<Country> GetById(Guid id);
         Task<Country> GetByCode3(string Code3);

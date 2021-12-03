@@ -28,5 +28,6 @@ namespace LTS.Solution.Domain.Models.Core
         public string RoutingController { get; private set; }
 
         public string RoutingAction { get; private set; }
+
     }
 }
