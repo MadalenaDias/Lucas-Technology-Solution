@@ -23,11 +23,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LTS.Module.Cms", "backend\M
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LTSSolution.Services.API.Core", "backend\APIs\Core\LTSSolution.Services.API.Core\LTSSolution.Services.API.Core.csproj", "{363325DA-481D-4414-806C-566131F7274B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LTS.Solution.Module.Billing", "backend\Modules\LTS.Solution.Module.Billing\LTS.Solution.Module.Billing.csproj", "{2FD20F1B-A3D1-46A3-80FE-2B6D132F39EE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LTS.Solution.Module.Billing", "backend\Modules\LTS.Solution.Module.Billing\LTS.Solution.Module.Billing.csproj", "{2FD20F1B-A3D1-46A3-80FE-2B6D132F39EE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LTS.Solution.Module.NF", "backend\Modules\LTS.Solution.Module.NF\LTS.Solution.Module.NF.csproj", "{F0D0908E-BE57-4A23-9555-FB85166F169B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LTS.Solution.Module.NF", "backend\Modules\LTS.Solution.Module.NF\LTS.Solution.Module.NF.csproj", "{F0D0908E-BE57-4A23-9555-FB85166F169B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LTS.Module.HR", "backend\Modules\LTS.Module.HR\LTS.Module.HR.csproj", "{61DF9DE8-B975-4E17-96A4-7A1F19DCD34F}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{D4ECC365-745F-45E9-A577-AABC1D740B1C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LTSSolution.WebHost", "Web\LTSSolution.WebHost\LTSSolution.WebHost.csproj", "{6FDA3535-5660-45D6-905E-801A3B92E205}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -123,18 +125,18 @@ Global
 		{F0D0908E-BE57-4A23-9555-FB85166F169B}.Release|iPhone.Build.0 = Release|Any CPU
 		{F0D0908E-BE57-4A23-9555-FB85166F169B}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
 		{F0D0908E-BE57-4A23-9555-FB85166F169B}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
-		{61DF9DE8-B975-4E17-96A4-7A1F19DCD34F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{61DF9DE8-B975-4E17-96A4-7A1F19DCD34F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{61DF9DE8-B975-4E17-96A4-7A1F19DCD34F}.Debug|iPhone.ActiveCfg = Debug|Any CPU
-		{61DF9DE8-B975-4E17-96A4-7A1F19DCD34F}.Debug|iPhone.Build.0 = Debug|Any CPU
-		{61DF9DE8-B975-4E17-96A4-7A1F19DCD34F}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
-		{61DF9DE8-B975-4E17-96A4-7A1F19DCD34F}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
-		{61DF9DE8-B975-4E17-96A4-7A1F19DCD34F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{61DF9DE8-B975-4E17-96A4-7A1F19DCD34F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{61DF9DE8-B975-4E17-96A4-7A1F19DCD34F}.Release|iPhone.ActiveCfg = Release|Any CPU
-		{61DF9DE8-B975-4E17-96A4-7A1F19DCD34F}.Release|iPhone.Build.0 = Release|Any CPU
-		{61DF9DE8-B975-4E17-96A4-7A1F19DCD34F}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
-		{61DF9DE8-B975-4E17-96A4-7A1F19DCD34F}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{6FDA3535-5660-45D6-905E-801A3B92E205}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FDA3535-5660-45D6-905E-801A3B92E205}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FDA3535-5660-45D6-905E-801A3B92E205}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{6FDA3535-5660-45D6-905E-801A3B92E205}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{6FDA3535-5660-45D6-905E-801A3B92E205}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{6FDA3535-5660-45D6-905E-801A3B92E205}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{6FDA3535-5660-45D6-905E-801A3B92E205}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FDA3535-5660-45D6-905E-801A3B92E205}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6FDA3535-5660-45D6-905E-801A3B92E205}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{6FDA3535-5660-45D6-905E-801A3B92E205}.Release|iPhone.Build.0 = Release|Any CPU
+		{6FDA3535-5660-45D6-905E-801A3B92E205}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{6FDA3535-5660-45D6-905E-801A3B92E205}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -151,7 +153,7 @@ Global
 		{363325DA-481D-4414-806C-566131F7274B} = {0F32C9EB-B5A7-4DC5-AC17-F6B116B854C1}
 		{2FD20F1B-A3D1-46A3-80FE-2B6D132F39EE} = {CA64F878-01C0-4929-8444-E7C6E76AE8C0}
 		{F0D0908E-BE57-4A23-9555-FB85166F169B} = {CA64F878-01C0-4929-8444-E7C6E76AE8C0}
-		{61DF9DE8-B975-4E17-96A4-7A1F19DCD34F} = {CA64F878-01C0-4929-8444-E7C6E76AE8C0}
+		{6FDA3535-5660-45D6-905E-801A3B92E205} = {D4ECC365-745F-45E9-A577-AABC1D740B1C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0A8EE321-83F1-4DAA-A22E-389A0B8D99BB}
