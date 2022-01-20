@@ -61,25 +61,14 @@ namespace LTS.Module.Core.Data.EFCore
             modelBuilder.Entity<Customer>()
                 .ToTable("Core_Customer");
 
-            //modelBuilder.Entity<User>(u =>
-            //{
-                //u.HasOne(x => x.DefaultShippingAddress)
-                   //.WithMany()
-                   //.HasForeignKey(x => x.DefaultShippingAddressId)
-                   //.OnDelete(DeleteBehavior.Restrict);
+            modelBuilder.Entity<User>(u =>
+                {
+                    
 
-                //u.HasOne(x => x.DefaultBillingAddress)
-                    //.WithMany()
-                    //.HasForeignKey(x => x.DefaultBillingAddressId)
-                    //.OnDelete(DeleteBehavior.Restrict);
-            //});
+                
+            });
 
-            //modelBuilder.Entity<UserAddress>()
-                //.HasOne(x => x.User)
-                //.WithMany(a => a.UserAddresses)
-                //.HasForeignKey(x => x.UserId)
-                //.OnDelete(DeleteBehavior.Restrict);
-
+            
             modelBuilder.Entity<Address>(x =>
             {
                 x.HasOne(d => d.District)
@@ -99,10 +88,10 @@ namespace LTS.Module.Core.Data.EFCore
                 .HasIndex(d => d.Name)
                 .IsUnique();
 
-            modelBuilder.Entity<CustomerUser>(b =>
+            modelBuilder.Entity<CustomerGroupUser>(b =>
             {
-                //b.HasKey(ur => new { ur.CustomerUserId, ur.CustomerGroupId });
-                //b.HasOne(ur => ur.User).WithMany(r => r.CustomerGroups).HasForeignKey(r => r.UserId).OnDelete(DeleteBehavior.Cascade);
+                b.HasKey(ur => new { ur.CustomerUser, ur.CustomerGroupId });
+                //b.HasOne(ur => ur.CustomerUser).WithMany(r => r.CustomerGroups).HasForeignKey(r => r.UserId).OnDelete(DeleteBehavior.Cascade);
                 //b.HasOne(ur => ur.CustomerGroup).WithMany(u => u.Users).HasForeignKey(u => u.CustomerGroupId).OnDelete(DeleteBehavior.Cascade);
                 b.ToTable("Core_CustomerGroupUser");
             });
